@@ -1,0 +1,40 @@
+@media only screen and (min-width: map-get($breakpoints, ipad-portrait)) and (max-width: map-get($breakpoints, laptop-landscape-large)) {
+	.mkd-header-vertical .mkd-footer-top-holder .mkd-grid-col-ipad-landscape-6 {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	footer .mkd-footer-bottom-holder .mkd-footer-bottom-two-cols .mkd-grid-col-6:nth-child(2) {
+		text-align: left !important;
+		padding: 0 !important;
+	}
+}
+@media only screen and (min-width: map-get($breakpoints, ipad-portrait)) and (max-width: map-get($breakpoints, ipad-landscape)) {
+	footer .mkd-footer-top .mkd-grid-col-3.mkd-grid-col-ipad-portrait-12 {
+		width: 50%;
+		float: left;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-landscape)) {
+	footer .mkd-footer-bottom-holder .mkd-footer-bottom-right {
+		text-align: left;
+	}
+
+	footer .mkd-footer-bottom-holder .widget.widget_nav_menu ul li a {
+		padding: 15px 11px;
+	}
+
+	footer .mkd-footer-bottom-holder .widget.mkd-footer-bottom-right.widget_text {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+}
+
+@include ipad-portrait {
+	footer .mkd-footer-top:not(.mkd-footer-top-full) .mkd-container-inner {
+		padding: 50px 0 50px;
+	}
+}

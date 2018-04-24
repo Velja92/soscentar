@@ -1,0 +1,59 @@
+@import 'grid-mixins';
+
+.mkd-grid-row {
+	@include createGridRow();
+}
+
+.mkd-grid-row.small-gutter{
+	@include createGridRowSmallGutter();
+}
+
+//generate column classes
+@for $i from 1 to (map-get($gridConfig, numberOfCols) + 1) {
+	.mkd-grid-col-#{$i} {
+		@include createGridColumn($i);
+
+		@include createGridColumnResponsive(map-get($gridConfig, stackOn));
+	}
+}
+
+//generate column small gutter classes
+@for $i from 1 to (map-get($gridConfig, numberOfCols) + 1) {
+	.mkd-grid-col-#{$i}.small-gutter {
+		@include createGridColumnSmallGutter($i);
+
+		@include createGridColumnResponsive(map-get($gridConfig, stackOn));
+	}
+}
+
+//generate push / pull classes
+@for $i from 1 to (map-get($gridConfig, numberOfCols) + 1) {
+	.mkd-grid-col-push-#{$i} {
+		@include createGridColumnPush($i);
+	}
+
+	.mkd-grid-col-pull-#{$i} {
+		@include createGridColumnPull($i);
+	}
+}
+
+//generate responsive witdh column classes
+@for $i from 1 to (map-get($gridConfig, numberOfCols) + 1) {
+	@each $size, $width in $breakpoints {
+		.mkd-grid-col-#{$size}-#{$i} {
+			$stack: false;
+
+			//check if current column is max number of columns.
+			//if it is than we need to stack columns
+			@if($i == map-get($gridConfig, numberOfCols)) {
+				$stack: true;
+			}
+
+			//if current column isn't the max number of columns
+			//than generate responsive for it.
+			@if($i < (map-get($gridConfig, numberOfCols) + 1)) {
+				@include createGridColumnResponsive($size, $i, $stack);
+			}
+		}
+	}
+}

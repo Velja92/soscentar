@@ -1,0 +1,111 @@
+.mkd-header-type1 {
+
+	.widget_text.mkd-right-from-logo-widget h6 {
+		text-align: left;
+	}
+
+	.mkd-logo-area,
+	.mkd-menu-area {
+		background-color: #fff;
+	}
+
+	.mkd-logo-area .mkd-right-from-logo-widget {
+		display: table;
+		float: left;
+		padding: 0 24px;
+		position: relative;
+		vertical-align: middle;
+		height: 100%;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.mkd-menu-area .mkd-right-from-main-menu-widget {
+		display: table;
+		float: left;
+		padding: 0 13px;
+		position: relative;
+		vertical-align: middle;
+		height: 100%;
+		border-right: 1px solid #f3f3f3;
+
+		&:first-child {
+			border-left: 1px solid #f3f3f3;
+		}
+
+        &.widget_mkd_booking_form_widget{
+            height: calc(100% + 2px); //in order to cover top and bottom border
+            margin-top: -1px;
+        }
+
+		&.widget_mkd_search_opener {
+			padding: 0 23px;
+		}
+
+		&.widget_mkd_side_area_opener {
+			padding: 0 23px;
+		}
+
+		.mkd-right-from-main-menu-widget-inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.widget_text.mkd-right-from-logo-widget {
+		.mkd-iwt-title-holder h6 {
+			color: #555;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+
+		.mkd-iwt:not(.mkd-iwt-left-from-title) .mkd-iwt-title-holder {
+			margin-bottom: 0;
+		}
+
+		.mkd-iwt-text-holder p {
+			margin: 0;
+			font-size: 13px;
+			line-height: 1em;
+		}
+
+		.mkd-icon-top-left {
+			float: left;
+			margin-right: 15px;
+		}
+
+		.mkd-elements-top-right {
+			float: left;
+		}
+
+	}
+
+	@import "widgets/search";
+
+	.mkd-menu-area {
+
+		.mkd-vertical-align-containers {
+            padding-right: 0;
+
+			.mkd-position-left-inner {
+				height: 100%;
+			}
+		}
+	}
+
+	&.mkd-header-type1-logo-border-bottom-disable .mkd-page-header .mkd-logo-area,
+	&.mkd-header-type1-menu-border-bottom-disable .mkd-page-header .mkd-menu-area {
+		border-bottom: none;
+	}
+
+	&.mkd-header-type1-menu-border-bottom-disable.mkd-header-type1 .mkd-menu-area .mkd-right-from-main-menu-widget:first-child {
+		border-left: none;
+	}
+
+	&.mkd-header-type1-menu-border-bottom-disable.mkd-header-type1 .mkd-menu-area .mkd-right-from-main-menu-widget,
+	&.mkd-header-type1-menu-border-bottom-disable.mkd-header-type1 .mkd-menu-area .mkd-shopping-cart-holder {
+		border-right: none;
+	}
+}

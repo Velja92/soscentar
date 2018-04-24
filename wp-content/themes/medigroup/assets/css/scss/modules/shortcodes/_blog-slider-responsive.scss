@@ -1,0 +1,50 @@
+@include ipad-landscape {
+	.mkd-blog-slider-holder {
+
+		h2.mkd-bs-item-title {
+			font-size: 30px;
+		}
+
+		.owl-prev {
+			left: 20px;
+		}
+
+		.owl-next {
+			right: 20px;
+		}
+
+		.owl-prev,
+		.owl-next {
+			font-size: 40px;
+		}
+	}
+}
+
+@include phone-landscape {
+	.mkd-blog-slider-holder {
+		.mkd-bs-item-content {
+			padding: 17px;
+		}
+
+		h2.mkd-bs-item-title {
+			font-size: 25px;
+		}
+
+		.mkd-bs-item-bottom-section {
+			display: none;
+		}
+
+		.owl-prev,
+		.owl-next {
+			display: none;
+		}
+	}
+}
+
+@include phone-portrait {
+	.mkd-blog-slider-holder {
+		.mkd-bs-item-content {
+			width: 82%;
+		}
+	}
+}

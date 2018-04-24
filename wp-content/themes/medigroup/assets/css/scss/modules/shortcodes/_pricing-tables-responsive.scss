@@ -1,0 +1,19 @@
+@include laptop-landscape {
+	.mkd-pricing-tables.mkd-four-columns .mkd-price-table {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}
+
+@include ipad-landscape {
+	.mkd-pricing-tables.mkd-two-columns .mkd-price-table,
+	.mkd-pricing-tables.mkd-three-columns .mkd-price-table,
+	.mkd-pricing-tables.mkd-four-columns .mkd-price-table {
+		width: 100%;
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

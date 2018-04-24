@@ -1,0 +1,55 @@
+@import "blocks/logo";
+@import "blocks/widgets";
+@import "blocks/navigation/navigation";
+
+.mkd-header-vertical {
+	.mkd-content,
+	footer {
+		padding-left: $vertical-menu-width;
+		box-sizing: border-box;
+	}
+
+	.mkd-vertical-menu-area {
+		position: fixed;
+		width: 263px;
+		top: 0;
+		left: 0;
+		padding: 35px 0;
+		background-color: transparent;
+		height: 100%;
+		z-index: 101;
+		-webkit-backface-visibility: hidden;
+		outline: 0;
+
+		@include mkdBoxSizing(border-box);
+
+		.mkd-vertical-area-widget-holder {
+			padding: 0 25px;
+		}
+	}
+
+	&.admin-bar .mkd-vertical-menu-area {
+		top: 33px;
+	}
+
+	.mkd-vertical-menu-area.mkd-with-scroll {
+		overflow: hidden;
+	}
+
+	.mkd-vertical-area-background {
+		position: fixed;
+		width: $vertical-menu-width;
+		height: 100%;
+		background-position: right top;
+		background-repeat: no-repeat;
+		background-color: #2c3e50;
+		background-size: cover;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		opacity: 1;
+
+		@include mkdTransition(opacity 0.5s ease, background-color 0.5s ease);
+	}
+
+}

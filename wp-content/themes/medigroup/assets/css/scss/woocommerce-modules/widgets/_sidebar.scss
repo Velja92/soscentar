@@ -1,0 +1,87 @@
+body.woocommerce {
+	.mkd-sidebar {
+		background-color: #34495e;
+		padding: 35px 25px 12px 25px;
+		color: #b7b7b7;
+
+		.widget {
+			h5 {
+				color: #fff;
+			}
+
+			&.widget_search {
+				margin-bottom: 46px;
+			}
+
+			&.widget_text {
+				margin-bottom: 28px;
+			}
+
+			&.widget_categories {
+				margin-bottom: 37px;
+			}
+
+			&.mkd-latest-posts-widget {
+				margin-bottom: 48px;
+			}
+
+			&.widget_tag_cloud {
+				margin-bottom: 50px;
+			}
+
+			.widget_mkd_instagram_widget {
+				margin-bottom: 38px;
+			}
+
+			.searchform {
+				background-color: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.15);
+
+				input[type=text] {
+					color: #fff;
+					background-color: transparent;
+					font-size: 13px;
+
+					@include mkdPlaceholder {
+						color: #fff;
+					}
+				}
+
+				input[type=submit] {
+					color: #fff;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	.mkd-column1.mkd-content-left-from-sidebar {
+		float: right;
+		position: relative;
+	}
+
+	.mkd-two-columns-75-25 .mkd-column1 .mkd-column-inner {
+		padding: 0 0 0 20px;
+	}
+
+	.mkd-column2 {
+		float: right;
+		position: relative;
+	}
+
+	.mkd-two-columns-75-25 .mkd-column2 .mkd-column-inner {
+		padding: 0 20px 0 0;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.mkd-two-columns-75-25 .mkd-column2 .mkd-column-inner,
+		.mkd-two-columns-75-25 .mkd-column1 .mkd-column-inner {
+			padding: 0;
+		}
+
+		.mkd-two-columns-75-25 .mkd-column2 .mkd-column-inner {
+			margin-top: 15px;
+		}
+
+	}
+}

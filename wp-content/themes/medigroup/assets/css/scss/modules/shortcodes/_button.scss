@@ -1,0 +1,341 @@
+.mkd-btn {
+	display: inline-block;
+	position: relative;
+	outline: none;
+	padding: 12px 28px;
+
+	font-style: normal;
+	font-weight: 700;
+	font-family: $headings-font-family;
+	font-size: 14px;
+	line-height: 1.7em;
+	text-transform: uppercase;
+	text-align: center;
+
+	cursor: pointer;
+
+	@include mkdTransition(color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out);
+	@include mkdBoxSizing(border-box);
+
+	.mkd-btn-icon-holder {
+		.mkd-btn-icon-elem {
+			vertical-align: middle;
+		}
+	}
+
+	.mkd-btn-icon-holder,
+	.mkd-btn-text {
+		position: relative;
+		z-index: 2;
+	}
+
+	&.mkd-btn-icon {
+
+		&.mkd-btn-icon-left {
+			.mkd-btn-text {
+				margin-left: 6px;
+			}
+		}
+
+		&.mkd-btn-icon-right {
+			.mkd-btn-text {
+				margin-right: 6px;
+			}
+		}
+	}
+
+	.mkd-btn-helper {
+		position: absolute;
+		z-index: 1;
+
+		@include mkdTransition(all 0.25s ease-out);
+	}
+
+	/* #Button types styles - start
+	   ========================================================================== */
+	&.mkd-btn-solid {
+		background-color: $first-main-color;
+		border: 2px solid $first-main-color;
+		color: #fff;
+	}
+
+	&.mkd-btn-outline {
+		border: 2px solid $first-main-color;
+		color: $first-main-color;
+		background-color: transparent;
+	}
+
+	&.mkd-btn-white {
+		border: 2px solid #fff;
+		background-color: #fff;
+		color: $first-main-color;
+	}
+
+	&.mkd-btn-white-outline {
+		border: 2px solid #fff;
+		background-color: transparent;
+		color: #fff;
+	}
+
+	&.mkd-btn-black {
+		border: 2px solid #303030;
+		color: #fff;
+		background-color: #303030;
+	}
+
+	&.mkd-btn-transparent {
+		background-color: transparent;
+		color: $first-main-color;
+		
+		.mkd-btn-text {
+			@include mkdTransition(opacity .25s ease-out);
+		}
+
+		&:hover {
+			.mkd-btn-text {
+				opacity: .9;
+			}
+		}
+	}
+	/* #Button types styles - end
+	   ========================================================================== */
+
+	/* #Button hover types styles - start
+    ========================================================================== */
+	&.mkd-btn-hover-outline {
+		&:not(.mkd-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: #fff;
+		}
+
+		&:not(.mkd-btn-custom-hover-bg):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: #2fa1ee;
+		}
+
+		&:not(.mkd-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: #2fa1ee;
+		}
+	}
+
+	&.mkd-btn-hover-solid {
+		&:not(.mkd-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: rgb(85, 85, 85) !important;
+		}
+
+		&:not(.mkd-btn-custom-hover-bg):not(.mkd-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: #fcfcfc !important;
+		}
+
+		.mkd-btn-helper {
+			background-color: $first-main-color;
+		}
+
+		&:not(.mkd-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: rgba(255, 255, 255, 0.05) !important;
+		}
+	}
+
+	&.mkd-btn-hover-white {
+		&:not(.mkd-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: $first-main-color !important;
+		}
+
+		&:not(.mkd-btn-custom-hover-bg):not(.mkd-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: #fff !important;
+		}
+
+		.mkd-btn-helper {
+			background-color: #fff;
+		}
+
+		&:not(.mkd-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: #fff !important;
+		}
+	}
+
+	&.mkd-btn-hover-white-outline {
+		&:not(.mkd-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: #fff !important;
+		}
+
+		&:not(.mkd-btn-custom-hover-bg):not(.mkd-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: transparent !important;
+		}
+
+		&:not(.mkd-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: #fff !important;
+		}
+	}
+
+	&.mkd-btn-hover-black {
+		&:not(.mkd-btn-custom-hover-color):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			color: #fff !important;
+		}
+
+		&:not(.mkd-btn-custom-hover-bg):not(.mkd-btn-with-animation):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			background-color: #303030 !important;
+		}
+
+		.mkd-btn-helper {
+			background-color: #303030;
+		}
+
+		&:not(.mkd-btn-custom-border-hover):hover {
+			//important because of inline color attribute. :not is used so we don't have to use important in JS
+			border-color: #303030 !important;
+		}
+	}
+
+	&.mkd-btn-underline-on-hover {
+		.mkd-btn-text {
+			&:after {
+				content:'';
+				position: absolute;
+				bottom:0;
+				left:0;
+				width: 100%;
+				height: 0;
+				border-bottom: 1px solid $first-main-color;
+				opacity: 0;
+				@include mkdTransition(opacity .25s cubic-bezier(.25,.46,.45,.94));
+			}
+		}
+
+		&:hover {
+			.mkd-btn-text {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	/* #Button hover types styles - end
+	========================================================================== */
+
+	/* #Button sizes styles - start
+	   ========================================================================== */
+	&.mkd-btn-small {
+		font-size: 11px;
+		padding: 8px 17px;
+		min-width: 95px;
+
+		font-weight: 600;
+
+		&.mkd-btn-icon-left .mkd-btn-text {
+			margin-left: 2px;
+		}
+
+		&.mkd-btn-icon-right .mkd-btn-text {
+			margin-right: 2px;
+		}
+	}
+
+	&.mkd-btn-medium {
+		//same as default
+		min-width: 140px;
+	}
+
+	&.mkd-btn-large {
+		font-size: 16px;
+		padding: 14.5px 50px;
+		min-width: 165px;
+	}
+
+	&.mkd-btn-huge {
+		min-width: 190px;
+	}
+
+	&.mkd-btn-huge,
+	&.mkd-btn-huge-full-width {
+		font-size: 18px;
+		padding: 18px 60px;
+	}
+
+	&.mkd-btn-huge-full-width {
+		display: block;
+		text-align: center;
+	}
+
+	&.mkd-btn-transparent {
+		padding: 0;
+		min-width: 0px;
+		font-weight: 600;
+
+		.mkd-btn-icon-holder {
+			font-size: 1.25em;
+		}
+	}
+	/* #Button sizes styles - end
+	   ========================================================================== */
+
+	/* #Hover animations - start
+	   ========================================================================== */
+	&.mkd-btn-fill-from-top {
+		.mkd-btn-helper {
+			width: 100%;
+			height: 0;
+			top: 0;
+			left: 0;
+		}
+
+		&:hover .mkd-btn-helper {
+			height: 100%;
+		}
+	}
+
+	&.mkd-btn-fill-from-left {
+		.mkd-btn-helper {
+			width: 0;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&:hover .mkd-btn-helper {
+			width: 100%;
+		}
+	}
+
+	&.mkd-btn-fill-from-right {
+		.mkd-btn-helper {
+			width: 0;
+			height: 100%;
+			top: 0;
+			right: 0;
+		}
+
+		&:hover .mkd-btn-helper {
+			width: 100%;
+		}
+	}
+
+	/* #Hover animations - end
+	   ========================================================================== */
+}
+
+.mkd-newsletter input.wpcf7-form-control.wpcf7-submit {
+	padding: 11px 28px;
+}
+
+.post-password-form input[type='submit'],
+input.wpcf7-form-control.wpcf7-submit {
+	@extend .mkd-btn;
+	@extend .mkd-btn-solid;
+	@extend .mkd-btn-medium;
+	@extend .mkd-btn-hover-outline;
+}
+

@@ -1,0 +1,16 @@
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	.mkd-doctor-single-holder .mkd-doctor-single-team {
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-landscape)) {
+	.mkd-doctor-single-holder .mkd-doctor-single-info .mkd-doctor-info-item-right {
+		width: 100%;
+	}
+
+	.mkd-doctor-single-holder .mkd-doctor-single-info .mkd-doctor-info-item-left {
+		width: 100%;
+		padding-left: 0;
+	}
+}

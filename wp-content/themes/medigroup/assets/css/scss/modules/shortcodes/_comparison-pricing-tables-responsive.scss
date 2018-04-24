@@ -1,0 +1,80 @@
+@include ipad-landscape {
+	.mkd-comparision-pricing-tables-holder {
+		&.mkd-three-columns {
+			.mkd-cpt-features-holder {
+				display: none;
+			}
+
+			.mkd-cpt-table {
+				width: 100%;
+				float: none;
+				margin-bottom: 30px;
+
+				.mkd-cpt-table-head-holder,
+				.mkd-cpt-table-content {
+					border-left: 1px solid #f2f2f2 !important;
+				}
+			}
+
+			.mkd-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+		}
+
+		&.mkd-four-columns {
+			.mkd-cpt-table {
+				width: 50%;
+				margin-bottom: 30px;
+			}
+
+			.mkd-cpt-features-holder {
+				display: none;
+			}
+
+			.mkd-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.mkd-cpt-table-head-holder,
+			.mkd-cpt-table-content {
+				border-left: 1px solid #f2f2f2 !important;
+			}
+		}
+
+		.mkd-cpt-table .mkd-cpt-table-content li {
+			line-height: 1.7em;
+			padding-top: 30px;
+		}
+	}
+}
+
+@include ipad-portrait {
+	.mkd-comparision-pricing-tables-holder {
+		&.mkd-four-columns,
+		&.mkd-two-columns {
+			.mkd-cpt-table {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+		}
+
+		&.mkd-two-columns {
+			.mkd-cpt-features-holder {
+				display: none;
+			}
+
+			.mkd-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.mkd-cpt-table-head-holder,
+			.mkd-cpt-table-content {
+				border-left: 1px solid #f2f2f2 !important;
+			}
+		}
+	}
+}
+

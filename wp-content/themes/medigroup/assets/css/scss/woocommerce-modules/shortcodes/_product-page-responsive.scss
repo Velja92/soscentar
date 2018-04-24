@@ -1,0 +1,63 @@
+/* Woocommerce Product Page shortcode responsive style - begin
+========================================================================== */
+
+@include phone-landscape {
+
+	div.woocommerce {
+
+		> .single-product {
+
+			.images {
+
+				.thumbnails {
+
+					&.columns-4 {
+
+						a {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include phone-portrait {
+
+	div.woocommerce {
+
+		> .single-product {
+
+			.woocommerce-tabs {
+				margin: 34px 0 0;
+
+				ul.tabs {
+
+					> li {
+						float: none;
+						width: 100%;
+						padding: 11px 0 0;
+
+						a {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.wpb_widgetised_column.wpb_content_element {
+		margin-bottom: 80px !important;
+	}
+
+	body.woocommerce .mkd-sidebar {
+		margin-bottom: 80px;
+	}
+}
+
+/* Woocommerce Product Page shortcode responsive style - end
+========================================================================== */

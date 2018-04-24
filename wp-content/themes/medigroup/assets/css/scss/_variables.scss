@@ -1,0 +1,89 @@
+$grid-width: 1100px;
+$grid-width-laptop-wide-landscape: 1100px;
+$grid-width-laptop-landscape: 950px;
+$grid-width-vertical-menu-laptop-landscape: 850px;
+$grid-width-ipad-landscape: 768px;
+$grid-width-ipad-portrait: 600px;
+$grid-width-phone-landscape: 420px;
+$grid-width-phone-portrait: 300px;
+$grid-width-smaller-phone-portrait: 95%;
+
+$grid-width-boxed: 1150px;
+$grid-width-laptop-landscape-boxed: 1000px;
+$grid-width-ipad-landscape-boxed: 818px;
+$grid-width-ipad-portrait-boxed: 650px;
+$grid-width-phone-landscape-boxed: 470px;
+$grid-width-phone-portrait-boxed: 350px;
+$grid-width-smaller-phone-portrait-boxed: 96%;
+
+$grid-width-1300: 1300px;
+$grid-width-1200: 1200px;
+$grid-width-1000: 1000px;
+$grid-width-800: 800px;
+
+$first-main-color: #3498db;
+$first-main-color-rgba: (
+	red: 52, 
+	green: 152, 
+	blue: 219,
+	op: 1
+);
+$default-background-color: #fff;
+$default-border-color: #e1e1e1;
+
+$header-light-color: #fff;
+$header-dark-color: #000;
+
+//typography variables
+$default-font-family: 'Open Sans', sans-serif;
+$default-text-color: #959595;
+$default-text-size: 14px;
+$default-text-line-height: 26px;
+$headings-font-family: 'Open Sans', sans-serif;
+$headings-text-color: #373737;
+$headings-text-line-height: 1.3em;
+$elements-box-shadow-color: rgba(0, 0, 0, 0.08);
+$shop-price-color: #b5b5b5;
+
+//responsive breakpoints
+//$large-laptop: 1400px;
+//$mac: 1280px;
+//$laptop-landscape: 1200px;
+//$ipad-landscape: 1024px;
+//$ipad-portrait: 768px;
+//$phone-landscape: 600px;
+//$phone-portrait: 480px;
+//$smaller-phone-portrait: 320px;
+
+$breakpoints: (
+		vertical-menu-laptop-wide-landscape: 1650px,
+		vertical-menu-laptop-landscape: 1441px,
+		laptop-landscape-large: 1440px,
+		large-laptop-plus-pixel: 1401px,
+		large-laptop: 1400px,
+		vertical-menu-ipad-landscape: 1314px,
+		mac: 1280px,
+		laptop-landscape-plus-pixel: 1201px,
+		laptop-landscape: 1200px,
+		ipad-landscape-plus-pixel: 1025px,
+		ipad-landscape: 1024px,
+		ipad-portrait-plus-pixel: 769px,
+		ipad-portrait: 768px,
+		phone-landscape-plus-pixel: 601px,
+		phone-landscape: 600px,
+		phone-portrait: 480px,
+		smaller-phone-portrait: 320px
+);
+
+$vertical-menu-width: 263px;
+
+// social share colors
+$linkedin-color: #007bb5;
+$googleplus-color: #dd4b39;
+$tumblr-color: #32506d;
+$pinterest-color: #cb2027;
+$facebook-color: #3b5998;
+$instagram-color: #125688;
+$twitter-color: #00aced;
+$vimeo-color: #aad450;
+$vk-color: #45668e;

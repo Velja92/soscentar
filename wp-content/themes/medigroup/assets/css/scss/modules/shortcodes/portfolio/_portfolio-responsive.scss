@@ -1,0 +1,144 @@
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	.mkd-portfolio-list-holder-outer {
+		&.mkd-ptf-five-columns article,
+		&.mkd-ptf-six-columns article {
+			width: 33%;
+		}
+
+		&.mkd-ptf-four-columns article {
+			width: 50%;
+		}
+
+		&.mkd-ptf-with-spaces {
+			&.mkd-ptf-five-columns article,
+			&.mkd-ptf-six-columns article {
+				width: 32.5%;
+			}
+
+			&.mkd-ptf-four-columns article {
+				width: 49%;
+			}
+		}
+	}
+
+	.mkd-portfolio-single-holder {
+		.mkd-portfolio-single-nav {
+			margin-top: 50px;
+		}
+
+		&.small-images,
+		&.big-images {
+			.mkd-portfolio-single-media {
+				margin-bottom: 25px;
+			}
+		}
+
+		.mkd-portfolio-info-holder {
+			margin-top: 25px;
+		}
+
+		.mkd-portfolio-item-content {
+			margin: 0;
+		}
+	}
+
+	.gallery.mkd-portfolio-gallery-four-columns {
+		.mkd-portfolio-single-media {
+			width: 50%;
+		}
+	}
+
+	&.small-images .mkd-portfolio-info-holder,
+	&.small-slider .mkd-portfolio-info-holder {
+		margin-top: 45px !important;
+	}
+}
+
+@include ipad-portrait {
+
+	.mkd-portfolio-list-holder-outer {
+		&.mkd-ptf-two-columns,
+		&.mkd-ptf-three-columns,
+		&.mkd-ptf-five-columns,
+		&.mkd-ptf-six-columns {
+			article {
+				width: 50%;
+			}
+		}
+
+		//portfolio with spaces widths
+		&.mkd-ptf-with-spaces {
+			&.mkd-ptf-two-columns,
+			&.mkd-ptf-three-columns,
+			&.mkd-ptf-five-columns,
+			&.mkd-ptf-six-columns {
+				article {
+					width: 49%;
+				}
+			}
+		}
+	}
+
+	.mkd-portfolio-single-holder {
+		.mkd-portfolio-single-nav {
+			.mkd-single-nav-image-holder {
+				display: none;
+			}
+
+			.mkd-single-nav-content-holder {
+				padding: 0 !important;
+			}
+		}
+	}
+
+	.gallery.mkd-portfolio-gallery-four-columns,
+	.gallery.mkd-portfolio-gallery-three-columns,
+	.gallery.mkd-portfolio-gallery-two-columns {
+		.mkd-portfolio-single-media {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-landscape)) {
+
+	.mkd-portfolio-list-holder-outer {
+		&.mkd-ptf-two-columns,
+		&.mkd-ptf-three-columns,
+		&.mkd-ptf-five-columns,
+		&.mkd-ptf-six-columns {
+			article {
+				width: 100%;
+			}
+		}
+
+		//portfolio with spaces widths
+		&.mkd-ptf-with-spaces {
+			&.mkd-ptf-two-columns,
+			&.mkd-ptf-three-columns,
+			&.mkd-ptf-five-columns,
+			&.mkd-ptf-six-columns {
+				article {
+					width: 100%;
+				}
+			}
+		}
+
+		.mkd-portfolio-filter-holder-inner ul li {
+			float: none;
+			span {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.mkd-portfolio-filter-holder {
+		.mkd-portfolio-filter-holder-inner ul li {
+			float: none;
+		}
+	}
+
+	.mkd-portfolio-list-holder-outer.mkd-ptf-with-spaces.mkd-ptf-four-columns article {
+		width: 100%;
+	}
+}

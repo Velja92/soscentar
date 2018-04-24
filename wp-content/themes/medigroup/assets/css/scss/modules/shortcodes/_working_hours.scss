@@ -1,0 +1,104 @@
+.mkd-working-hours-holder {
+	position: relative;
+	padding: 32px 29px 27px;
+	background-color: $first-main-color;
+	color: #fff;
+
+	.mkd-wh-button {
+		margin-top: 19px;
+
+		.mkd-btn {
+			padding: 9px 15px;
+		}
+
+		span.mkd-btn-text {
+			font-size: 13px;
+		}
+
+		.mkd-btn.mkd-btn-medium {
+			width: 100%;
+		}
+	}
+
+	.mkd-wh-icon-holder {
+		text-align: center;
+		height: 68px;
+		width: 68px;
+		background-color: #34495e;
+		position: absolute;
+		top: 0;
+		left: 50%;
+
+		@include mkdTransform(translateX(-50%) translateY(-50%));
+		@include mkdBorderRadius(50%);
+	}
+
+	span.mkd-wh-icon {
+		text-align: center;
+		font-size: 24px;
+		color: #8bc0df;
+		line-height: 68px;
+	}
+
+	&.mkd-working-hours-light {
+		color: #fff;
+
+		.mkd-wh-title-holder {
+
+			.mkd-wh-title {
+				color: $first-main-color;
+			}
+		}
+	}
+
+	.mkd-wh-title-holder {
+		text-align: left;
+		margin-bottom: 17px;
+
+		.mkd-wh-title {
+			margin: 0;
+			color: #fff;
+		}
+	}
+
+	.mkd-wh-text-holder {
+		margin-bottom: 20px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.mkd-wh-item {
+		position: relative;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		padding: 9px 2px;
+		margin: 0 -2px;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+
+		.mkd-wh-day {
+			float: left;
+			width: 50%;
+			white-space: nowrap;
+			text-align: left;
+			font-weight: 600;
+			font-size: 14px;
+		}
+
+		.mkd-wh-hours {
+			float: left;
+			width: 50%;
+			white-space: nowrap;
+			text-align: right;
+			font-size: 14px;
+		}
+	}
+}

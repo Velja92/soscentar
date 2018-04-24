@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Social Icon widget start styles
+   ========================================================================== */
+
+.mkd-social-icon-widget-holder {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+
+	.mkd-social-icon-widget {
+		color: inherit;
+		line-height: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit;
+		letter-spacing: inherit;
+	}
+
+	.mkd-top-bar &,
+	footer & {
+		color: #fff;
+	}
+}
+
+.mkd-footer-bottom-holder .widget_mkd_social_icon_widget {
+	display: inline-block;
+	border-left: 1px solid rgba(74, 74, 74, 0.55);
+	vertical-align: middle;
+
+	&:last-child {
+		border-right: 1px solid rgba(74, 74, 74, 0.55);
+	}
+
+	a {
+		display: table;
+		height: 100%;
+		padding: 20px 23px;
+		font-size: 16px;
+		color: #fff !important;
+	}
+
+}
+
+.mkd-top-bar .widget_mkd_social_icon_widget {
+	margin: 0;
+	margin-right: 0 !important;
+	padding-right: 0 !important;
+	border-left: 1px solid rgba(#4a4a4a, 0.55);
+
+	.mkd-top-bar-light & {
+		border-color: rgba($header-light-color, 0.14);
+	}
+
+	.mkd-top-bar-dark & {
+		border-color: rgba($header-dark-color, 0.14);
+	}
+
+	&:last-child {
+		border-right: 1px solid rgba(#4a4a4a, 0.55);
+
+		.mkd-top-bar-light & {
+			border-color: rgba($header-light-color, 0.14);
+		}
+
+		.mkd-top-bar-dark & {
+			border-color: rgba($header-dark-color, 0.14);
+		}
+	}
+
+	.mkd-top-bar-widget-inner {
+		height: 100%;
+	}
+
+	a {
+		display: table;
+		height: 100%;
+		vertical-align: middle;
+		padding: 0 16px;
+	}
+
+	.mkd-social-icon-widget {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/* ==========================================================================
+   Social Icon widget end styles
+   ========================================================================== */

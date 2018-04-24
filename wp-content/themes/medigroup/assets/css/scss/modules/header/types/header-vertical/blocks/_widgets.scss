@@ -1,0 +1,13 @@
+.mkd-header-vertical {
+	.mkd-vertical-area-widget-holder {
+		z-index: 100;
+		position: relative;
+
+		.mkd-vertical-area-widget .mkd-icon-shortcode.circle .mkd-icon-element,
+		.mkd-vertical-area-widget .mkd-icon-shortcode.square .mkd-icon-element {
+			position: relative;
+			top: -1px;
+		}
+
+	}
+}

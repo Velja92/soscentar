@@ -1,0 +1,62 @@
+@media only screen and (min-width: 481px) and (max-width: 1440px) {
+	.mkd-booking-form {
+
+		&.mkd-bf-floating {
+			
+			.mkd-date,
+			.mkd-time,
+			.mkd-bf-name,
+			.mkd-bf-contact {
+				width: 50%;
+				float: left;
+			}
+			
+			.mkd-date,
+			.mkd-time {
+				margin-bottom: 14px;
+			}
+
+			.mkd-date,
+			.mkd-bf-name {
+				padding-right: 8px;
+
+				&:after {
+					right: 25px;
+				}
+			}
+
+			.mkd-time,
+			.mkd-bf-contact {
+				padding-left: 8px;
+			}
+		}
+	}
+}
+
+@include phone-portrait {
+	.mkd-booking-form.mkd-bf-layout-vertical .mkd-bf-form-fields.mkd-bf-columns-2 .mkd-bf-narrow {
+		width: 100%;
+		float: none;
+	}
+
+	.mkd-booking-form.mkd-bf-layout-vertical .mkd-bf-form-fields.mkd-bf-columns-2 .mkd-bf-narrow:nth-child(odd) {
+		padding-right: 0;
+	}
+
+	.mkd-booking-form.mkd-bf-layout-vertical .mkd-bf-form-fields.mkd-bf-columns-2 .mkd-bf-narrow:nth-child(even) {
+		padding-left: 0;
+	}
+
+	.mkd-booking-form {
+
+		&.mkd-bf-floating {
+			bottom: initial !important;
+			margin-top: 115px;
+
+			.mkd-booking-form-inner {
+				position: relative;
+				width: 100%;
+			}
+		}
+	}
+}

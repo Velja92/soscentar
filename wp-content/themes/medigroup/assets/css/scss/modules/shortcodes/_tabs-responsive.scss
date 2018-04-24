@@ -1,0 +1,20 @@
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	.mkd-tabs.mkd-vertical .mkd-tabs-nav,
+	.mkd-tabs.mkd-vertical .mkd-tab-container {
+		width: 100% !important;
+	}
+
+	.mkd-tabs .mkd-tabs-nav li,
+	.mkd-tabs.mkd-horizontal .mkd-tabs-nav li {
+		float: none;
+		display: block;
+	}
+
+	.mkd-tabs.mkd-vertical .mkd-tab-container {
+		border: 1px solid #f2f2f2;
+	}
+
+	.mkd-tabs.mkd-vertical .mkd-tabs-nav li.ui-state-active a:after {
+		content: none;
+	}
+}

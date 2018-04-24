@@ -1,0 +1,29 @@
+/* ==========================================================================
+   WooCommerce Message styles - begin
+   ========================================================================== */
+.mkd-woocommerce-page {
+
+	.woocommerce-message,
+	.woocommerce-info,
+	.woocommerce-error {
+		position: relative;
+		display: block;
+		margin: 0 0 40px;
+		line-height: 48px;
+		list-style: none;
+		border-bottom: 1px solid #eaeaea;
+	}
+
+	.woocommerce-info {
+
+		.showcoupon,
+		.showlogin {
+			position: relative;
+			padding-left: 10px;
+		}
+	}
+}
+
+/* ==========================================================================
+   WooCommerce Message styles - end
+   ========================================================================== */

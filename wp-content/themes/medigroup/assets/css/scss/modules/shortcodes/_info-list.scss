@@ -1,0 +1,73 @@
+.mkd-info-list {
+
+	.mkd-info-list-title {
+		margin-top: 0;
+		margin-bottom: 22px;
+	}
+
+	.mkd-info-list-button {
+		margin-top: 26px;
+	}
+
+	.mkd-info-list-item {
+		border-top: 1px solid #ebebeb;
+		@include mkdTableLayout;
+		height: 50px;
+
+		&:last-child {
+			border-bottom: 1px solid #ebebeb;
+		}
+
+		&:hover {
+			background: #f7f7f7;
+
+			.mkd-ili-left {
+				color: $first-main-color;
+			}
+		}
+
+		.mkd-ili-link {
+			@include mkdTableLayout;
+		}
+
+		.mkd-info-list-item-inner {
+			@include mkdTableCellLayout;
+			text-align: left;
+			color: #6a767e;
+			font-weight: 600;
+			background-color: #fff;
+			padding: 0 12px;
+
+			@include mkdTransition(background-color 0.3s ease);
+
+			&:hover {
+				background-color: #f7f7f7;
+
+				.mkd-ili-title {
+					color: $first-main-color;
+				}
+			}
+		}
+
+		.mkd-ili-left {
+			float: left;
+			width: auto;
+
+			.mkd-ili-title {
+				margin-right: 5px;
+				text-transform: uppercase;
+
+				@include mkdTransition(color 0.3s ease);
+			}
+
+			.mkd-ili-subtitle {
+				color: #bdc7ce;
+			}
+		}
+
+		.mkd-ili-right {
+			float: right;
+			width: auto;
+		}
+	}
+}

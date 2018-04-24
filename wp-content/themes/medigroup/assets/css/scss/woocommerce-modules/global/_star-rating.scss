@@ -1,0 +1,44 @@
+/* ==========================================================================
+   WooCommerce Variation styles - begin
+   ========================================================================== */
+.woocommerce {
+
+    .star-rating {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "ElegantIcons";
+        font-size: 12px;
+        line-height: 1.1em;
+        letter-spacing: 7px;
+		color:#dfdfdf;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+
+
+
+        &:before {
+            content: "\e033\e033\e033\e033\e033";
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+			color: #e83f53;
+            overflow: hidden;
+
+            &:before {
+                content: "\e033\e033\e033\e033\e033";
+            }
+        }
+    }
+
+	&.single-product .star-rating{
+		font-size: 14px;
+		latter-spacing:8px;
+	}
+}
+/* ==========================================================================
+   WooCommerce Variation styles - end
+   ========================================================================== */

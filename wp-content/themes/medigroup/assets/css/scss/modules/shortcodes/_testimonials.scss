@@ -1,0 +1,279 @@
+/* ==========================================================================
+# Testimonial style - begin
+========================================================================== */
+.mkd-testimonials {
+	z-index: 15;
+
+	.mkd-testimonial-text-holder {
+		position: relative;
+		display: block;
+
+		.mkd-testimonial-text-inner {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.mkd-testimonial-title {
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: 700;
+		margin: 20px 0;
+		font-family: $headings-font-family;
+		text-transform: uppercase;
+	}
+
+	.mkd-testimonial-author-text {
+		margin-bottom: 0;
+	}
+
+	/* Testimonials image  styles */
+
+	.mkd-testimonial-image-holder {
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.mkd-testimonials.owl-carousel {
+
+	.owl-item {
+		@include mkdTransition(opacity .3s);
+		
+		&:not(.active) {
+			opacity: 0;
+		}
+	}
+
+	.owl-buttons {
+
+		width: 100%;
+
+		.owl-prev {
+			position: absolute;
+			top: 50%;
+			@include mkdTransform(translateY(-50%));
+			left: 2%;
+		}
+
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			@include mkdTransform(translateY(-50%));
+			right: 2%;
+		}
+
+		.mkd-prev-icon,
+		.mkd-next-icon {
+			display: inline-block;
+			width: 42px;
+			height: 42px;
+			@include mkdBorderRadius(50%);
+			border: 2px solid #74797b;
+			text-align: center;
+
+			i {
+				font-size: 22px;
+				line-height: 40px;
+				color: #74797b;
+			}
+
+		}
+
+	}
+
+	.owl-pagination {
+		text-align: center;
+
+		.owl-page {
+			display: inline-block;
+		}
+
+		.owl-page span {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			margin: 3px;
+			filter: Alpha(Opacity=50);
+			opacity: 0.5;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			background: #74797b;
+		}
+
+		.owl-page.active span {
+			opacity: 1;
+		}
+
+	}
+
+}
+
+.mkd-testimonials-holder-inner {
+
+	.testimonials-grid {
+		float: left;
+		box-sizing: border-box;
+		padding-bottom: 40px;
+		margin-top: 35px;
+		border-bottom: 1px solid #f2f2f2;
+		position: relative;
+
+		&.mkd-one-column {
+			width: 100%;
+		}
+
+		&.mkd-two-columns {
+			width: 50%;
+		}
+
+		&.mkd-three-columns {
+			width: 33.33%;
+		}
+
+		&.mkd-four-columns {
+			width: 25%;
+		}
+
+		.mkd-testimonial-quote-sign {
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: left;
+			font-size: 60px;
+			color: $first-main-color;
+			margin-left: -14px;
+
+			&.light {
+				color: #fff;
+			}
+		}
+
+		.mkd-testimonial-text {
+			text-align: left;
+
+			&.light {
+				color: #fff;
+			}
+		}
+
+		.mkd-testimonial-text-inner {
+			padding-left: 65px;
+			width: 100%;
+			height: 100%;
+			@include mkdBoxSizing(border-box);
+		}
+
+		.mkd-testimonial-author {
+			margin-top: 25px;
+		}
+
+		.mkd-testimonial-author-text,
+		.mkd-testimonials-job {
+			margin-top: 0;
+			color: #b7b7b7;
+			line-height: 22px;
+			font-weight: 400;
+			text-transform: none;
+
+			&.light {
+				color: #fff;
+			}
+		}
+
+		.mkd-testimonials-job {
+			color: $first-main-color;
+		}
+
+		.mkd-testimonial-image-holder {
+			margin-right: 15px;
+			float: left;
+
+			img {
+				width: 45px;
+				height: 45px;
+				@include mkdBorderRadius(50%);
+			}
+		}
+
+		.mkd-testimonial-text {
+			font-family: $default-font-family;
+			line-height: 26px;
+			font-weight: 400;
+		}
+
+		.mkd-testimonial-text-inner.light,
+		.mkd-testimonials-job.light {
+			color: #fff;
+		}
+
+	}
+
+	&:last-child {
+
+		.testimonials-grid {
+			border-bottom: none;
+		}
+	}
+}
+
+.mkd-testimonial-content.testimonials-slider {
+
+	.mkd-testimonial-quote-sign {
+		text-align: center;
+		font-size: 60px;
+		color: $first-main-color;
+		margin-bottom: 17px;
+
+		&.light {
+			color: #fff;
+		}
+	}
+
+	.mkd-testimonial-author-text {
+		color: #b7b7b7;
+		font-weight: 400;
+		margin-top: 30px;
+		text-transform: none;
+
+		&.light {
+			color: #fff;
+		}
+	}
+
+	.mkd-testimonials-job {
+		display: block;
+		text-transform: none;
+	}
+
+	.mkd-testimonial-title {
+		margin-bottom: 50px;
+	}
+
+	.mkd-testimonial-text-inner.light,
+	.mkd-testimonials-job.light {
+		color: #fff;
+
+		.mkd-testimonial-text {
+			color: inherit;
+		}
+	}
+
+	.mkd-testimonial-text {
+		font-size: 24px;
+		line-height: 46px;
+		color: #959595;
+	}
+}
+
+.mkd-testimonials-holder.light .owl-carousel .owl-pagination .owl-page span {
+	background: #fff;
+}
+
+/* ==========================================================================
+# Testimonial style - end
+========================================================================== */
+

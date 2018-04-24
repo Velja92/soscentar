@@ -1,0 +1,41 @@
+.mkd-blog-holder {
+
+	&.mkd-blog-type-masonry.mkd-masonry-full-width {
+
+		article {
+			width: 25%;
+			padding: 0 21px;
+
+			.mkd-post-image > a {
+				display: inline-block;
+				position: relative;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(255,255,255,.15);
+					opacity: 0;
+					@include mkdTransition(opacity .4s);
+				}
+
+				&:hover {
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.mkd-blog-masonry-grid-sizer {
+			width: 25%;
+		}
+
+		.mkd-blog-masonry-grid-gutter {
+			width: 0;
+		}
+	}
+}

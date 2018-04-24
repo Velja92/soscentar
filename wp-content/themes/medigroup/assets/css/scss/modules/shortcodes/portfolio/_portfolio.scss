@@ -1,0 +1,339 @@
+$portfolio-gallery-layers: (
+		background-overlay: 1,
+		item-link: 2,
+		item-content: 3
+);
+
+@import 'portfolio-types/standard';
+@import 'portfolio-types/gallery';
+@import 'portfolio-slider';
+@import 'portfolio-marquee';
+
+/* ==========================================================================
+   Portfolio shortcode styles - begin
+   ========================================================================== */
+
+/* #General portfolio list styles - start
+  ========================================================================== */
+.mkd-portfolio-list-holder {
+	height: 100%;
+
+	&[id^="MixItUp"] {
+		overflow: hidden;
+	}
+
+	article {
+		position: relative;
+		vertical-align: top;
+
+		.mkd-ptf-item-title {
+			margin: 0;
+			color: #6a767e;
+			text-transform: uppercase;
+		}
+
+		.mkd-ptf-item-image-holder {
+			position: relative;
+
+			a {
+				display: block;
+			}
+
+			img {
+				vertical-align: top;
+				height: auto;
+				max-width: 100%;
+			}
+
+			.mkd-ptf-video-marker {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include mkdTransform(translate(-50%, -50%));
+				color: #fff;
+				font-size: 60px;
+			}
+		}
+
+		.mkd-like {
+			color: #808080;
+
+			&:after {
+				content: '\e030';
+				font-family: 'ElegantIcons';
+				color: inherit;
+			}
+
+			&.liked:after {
+				content: '\e089';
+			}
+
+		}
+
+		.mkd-ptf-bottom-link {
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
+
+	article.mix {
+		display: none;
+		visibility: hidden;
+		float: left;
+	}
+}
+
+.mkd-portfolio-list-holder-outer.mkd-portfolio-gallery-hover {
+	article {
+		overflow: hidden;
+
+		.mkd-ptf-item-title {
+			position: relative;
+			color: #fff;
+		}
+
+		.mkd-ptf-item-title,
+		.mkd-like {
+			z-index: 3;
+		}
+
+		.mkd-ptf-category-holder {
+			font-family: $headings-font-family;
+			color: #808080;
+			font-weight: 700;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+		.mkd-ptf-item-bottom {
+			position: relative;
+			margin-top: 5px;
+
+			.mkd-ptf-category-holder {
+				padding-right: 50px;
+			}
+
+			.mkd-like {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+
+		.mkd-ptf-item-image-holder {
+			overflow: hidden;
+		}
+
+		.mkd-portfolio-link {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+
+		.mkd-ptf-item-text-overlay {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			background-color: rgba(52, 152, 212, 0.9);
+			text-align: center;
+
+			-webkit-transform: translate3d(0, 100%,0);
+			transform: translate3d(0, 100%,0);
+			@include mkdTransition(all .25s cubic-bezier(0.25, 0.46, 0.45, 0.94));
+		}
+
+		.mkd-ptf-item-text-overlay-inner {
+			@include mkdTableLayout;
+		}
+
+		.mkd-ptf-item-text-holder {
+			display: table-cell;
+			vertical-align: bottom;
+			padding: 19px 20px 16px;
+
+			.mkd-ptf-item-title {
+				font-weight: 600;
+			}
+
+			.mkd-ptf-bottom-link {
+				margin-top: 6px;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+
+		&:hover {
+			.mkd-ptf-item-text-overlay {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+		}
+
+		.mkd-ptf-item-icons-holder {
+			margin: 10px 0;
+		}
+	}
+}
+
+.mkd-portfolio-list-holder-outer.mkd-ptf-with-spaces {
+	.mkd-portfolio-list-holder {
+		font-size: 0.1px;
+		line-height: 0;
+		text-align: justify;
+
+		article {
+			//reset portfolio item's typography
+			font-size: $default-text-size;
+			line-height: $default-text-line-height;
+			text-align: left;
+
+			margin: 0 0 2%;
+		}
+
+		article.mix {
+			float: none;
+		}
+
+		.mkd-ptf-gap {
+			display: inline-block;
+		}
+	}
+}
+
+/* General portfolio list styles - end
+   ========================================================================== */
+
+/* #Portfolio grid styles - start
+  ========================================================================== */
+.mkd-portfolio-list-holder-outer {
+	&.mkd-ptf-two-columns {
+		article {
+			width: 50%;
+		}
+	}
+
+	&.mkd-ptf-three-columns {
+		article {
+			width: 33.33%;
+		}
+	}
+
+	&.mkd-ptf-four-columns {
+		article {
+			width: 25%;
+		}
+	}
+
+	&.mkd-ptf-five-columns {
+		article {
+			width: 20%;
+		}
+	}
+
+	&.mkd-ptf-six-columns {
+		article {
+			width: 16.66%;
+		}
+	}
+
+	//portfolio with spaces widths
+	&.mkd-ptf-with-spaces {
+		&.mkd-ptf-two-columns {
+			article,
+			.mkd-ptf-gap {
+				width: 49%;
+			}
+		}
+
+		&.mkd-ptf-three-columns {
+			article,
+			.mkd-ptf-gap {
+				width: 32%;
+			}
+		}
+
+		&.mkd-ptf-four-columns {
+			article,
+			.mkd-ptf-gap {
+				width: 23.5%;
+			}
+		}
+
+		&.mkd-ptf-five-columns {
+			article,
+			.mkd-ptf-gap {
+				width: 19%;
+			}
+		}
+
+		&.mkd-ptf-six-columns {
+			article,
+			.mkd-ptf-gap {
+				width: 15%;
+			}
+		}
+	}
+}
+
+/* Portfolio grid styles - end
+   ========================================================================== */
+
+/* #Portfolio filters styles - start
+  ========================================================================== */
+.mkd-portfolio-filter-holder {
+	margin: 0 0 60px;
+
+	.mkd-portfolio-filter-holder-inner {
+		text-align: center;
+
+		ul {
+			display: inline-block;
+			list-style: none;
+			vertical-align: middle;
+			padding: 0;
+			margin: 0;
+		}
+
+		ul li {
+			cursor: pointer;
+			display: block;
+			margin: 0;
+			float: left;
+			padding: 0 15px;
+
+			font-family: $headings-font-family;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: #6a767e;
+		}
+
+		ul li.active,
+		ul li.current,
+		ul li:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+/* Portfolio filters styles - end
+   ========================================================================== */
+
+/* #Portfolio Load More Button - start
+  ========================================================================== */
+.mkd-portfolio-list-holder-outer .mkd-ptf-list-paging {
+	text-align: center;
+	margin: 20px 0 0 0;
+}
+
+/* Portfolio Load More Button - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio styles - end
+   ========================================================================== */

@@ -1,0 +1,297 @@
+table.tt_timetable {
+
+	font-family: $headings-font-family;
+	font-weight: 700;
+	color: #808080;
+	font-size: 16px;
+	border-collapse: collapse !important; //plugin is also using important
+
+	border: 1px solid #ececec;
+
+	@include mkdBoxShadow(1px 1px 4.85px 0.15px rgba(0, 0, 0, 0.12));
+
+	thead tr {
+		border: 1px solid #ececec;
+	}
+
+	tbody tr {
+		border: 1px solid #ececec;
+	}
+
+	th {
+		font-size: 14px;
+		font-weight: 700;
+		color: #3e3e3e;
+		height: 75px;
+
+		border-right: 1px solid #ececec !important; //plugin is also using important
+
+		@include mkdBoxSizing(border-box);
+	}
+
+	td {
+		font-weight: 600;
+		color: #808080;
+		font-size: 14px;
+
+		border-right: 1px solid #ececec !important;
+	}
+
+	.row_gray {
+		background-color: transparent !important; //important because plugin css is also using important
+	}
+
+	.event_container {
+		padding: 16px 16px 62px 16px;
+		text-align: left;
+	}
+
+	tbody tr:nth-child(even) {
+		background-color: #fff !important;
+	}
+
+	tbody tr:nth-child(odd) {
+		background-color: #f9f9f9 !important;
+	}
+
+	.event {
+		background-color: transparent;
+		color: #808080;
+
+		.event_header {
+			color: #808080 !important; //important because plugin scss is also using important
+			font-weight: 600;
+			font-size: 13px;
+		}
+
+		.before_hour_text,
+		.after_hour_text {
+			font-size: 12px;
+			color: #6a767e;
+			font-weight: 400;
+		}
+
+		.top_hour {
+			margin-top: 5px;
+			display: inline-block;
+			margin-right: 3px;
+
+			&:after {
+				content: '-';
+				margin-left: 4px;
+			}
+		}
+
+		.bottom_hour {
+			margin-bottom: 5px;
+			display: inline-block;
+		}
+
+		.event_container .hours {
+			color: #6a767e !important;
+		}
+
+		&:not(.tt_single_event) {
+			.event_container {
+				border-bottom: 1px solid #ececec;
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+
+		hr {
+			display: none;
+		}
+
+		&:hover, .event_container.tt_tooltip:hover {
+			background-color: transparent;
+		}
+
+		&.tt_tooltip:hover .hours, .event_container.tt_tooltip:hover .hours {
+			color: #808080;
+		}
+
+		a:hover, a.event_header:hover {
+			text-decoration: none;
+			color: $first-main-color !important;
+		}
+	}
+
+	.tt_tooltip_content {
+		color: #fff !important;
+		background: $first-main-color;
+		height: 100%;
+		margin: 0 15px;
+		padding: 15px;
+		font-size: 12px;
+		line-height: 23px;
+		text-align: left;
+
+		@include mkdBoxSizing(border-box);
+		@include mkdBorderRadius(2px);
+	}
+
+	.tt_tooltip_content > a {
+		display: none;
+	}
+
+	.tt_tooltip .tt_tooltip_arrow {
+		border-color: $first-main-color transparent;
+		position: absolute;
+		left: 38px;
+		border-width: 16px 16px 0;
+		bottom: -10px;
+	}
+}
+
+.tt_responsive .tt_timetable.small {
+	.box_header {
+		font-family: $headings-font-family !important;
+		color: #808080 !important;
+		font-size: 20px !important;
+		text-align: left;
+
+		margin-bottom: 20px;
+	}
+
+	.tt_items_list {
+		li {
+			border-color: #ececec;
+			padding: 15px 0 !important;
+		}
+
+		.event_container {
+			text-align: left;
+		}
+
+		a, .value {
+			font-family: $headings-font-family;
+			font-weight: 700;
+			font-size: 16px;
+			color: #808080 !important;
+		}
+	}
+}
+
+.tt_tabs {
+	text-align: center;
+
+	.tt_timetable td {
+		height: 30px;
+	}
+
+	.tt_tabs_navigation {
+		display: inline-block;
+		width: auto !important;
+		margin-bottom: 15px;
+
+		li {
+			margin-right: 15px !important;
+			margin-bottom: 15px !important;
+
+			float: none;
+			display: inline-block;
+		}
+
+		li a {
+			color: #fff !important;
+			background-color: $first-main-color;
+			font-size: 14px;
+			font-weight: 700;
+			font-family: $headings-font-family;
+
+			border: 2px solid $first-main-color !important;
+			padding: 5px 15px !important;
+
+			@include mkdBorderRadius(30px);
+			@include mkdBoxSizing(border-box);
+
+			-webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+			-moz-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+			transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+		}
+
+		.ui-tabs-active a,
+		li a:hover {
+			background-color: transparent;
+			border: 2px solid $first-main-color !important;
+			color: $first-main-color !important;
+		}
+	}
+
+}
+
+.tabs_box_navigation {
+	&.sf-timetable-menu .tabs_box_navigation_selected {
+		color: #8f979d;
+		border-color: #eae9e9 !important; //in order to override plugin css
+		background-color: transparent;
+
+		&:hover {
+			color: #8f979d;
+		}
+
+		&:before {
+			content: '\e874';
+			position: absolute;
+			right: 0;
+			right: 18px;
+			font-family: 'Linearicons-Free';
+		}
+	}
+	.tabs_box_navigation_icon {
+		display: none;
+	}
+}
+
+.sf-timetable-menu li:hover ul a, .sf-timetable-menu li.submenu:hover ul a {
+	color: #8f979d !important;
+	font-size: 15px;
+}
+
+.tabs_box_navigation label {
+	font-size:15px!important;	//important because plugin scss is also using important
+	line-height: 20px;
+}
+
+.sf-timetable-menu li ul li a:hover, .sf-timetable-menu li ul li.selected a:hover {
+	color: #8f979d !important;
+}
+
+ul.timetable_clearfix.tabs_box_navigation.events_categories_filter.tt_responsive.sf-timetable-menu,
+ul.timetable_clearfix.tabs_box_navigation.events_filter.tt_responsive.sf-timetable-menu {
+	margin: 0 0 65px 0 !important;	//important because plugin scss is also using important
+	float: right !important;
+}
+
+.tt_tooltip {
+	.tt_tooltip_text {
+		visibility: hidden;
+		opacity: 0;
+		-webkit-transform-origin: 50% 200%;
+		transform-origin: 50% 200%;
+		@include mkdTransform(scale(.8));
+		-webkit-transition: -webkit-transform .3s cubic-bezier(0.18, 0.6, 0.01, 1.28), opacity .2s, visibility .2s;
+		transition: transform .3s cubic-bezier(0.18, 0.6, 0.01, 1.28), opacity .2s, visibility .2s;
+	}
+
+	&:hover {
+		.tt_tooltip_text {
+			visibility: visible;
+			opacity: 1;
+			@include mkdTransform(scale(1));
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.tt_responsive .tt_timetable.small {
+		display: block !important;
+	}
+
+	.tt_responsive .tt_timetable {
+		display: none !important;
+	}
+}

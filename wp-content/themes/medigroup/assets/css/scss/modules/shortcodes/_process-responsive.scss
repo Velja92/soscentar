@@ -1,0 +1,107 @@
+@media only screen and  (max-width: map-get($breakpoints, laptop-landscape-large)) {
+	.mkd-header-vertical .mkd-process-holder.mkd-process-horizontal.mkd-process-holder-items-four .mkd-process-item-holder {
+		width: 50%;
+		margin-bottom: 55px;
+	}
+
+	.mkd-header-vertical .mkd-process-holder.mkd-process-horizontal.mkd-process-holder-items-four .mkd-process-item-holder .mkd-pi-holder-inner {
+		width: 100%;
+	}
+
+	.mkd-header-vertical .mkd-process-holder.mkd-process-horizontal .mkd-process-bg-holder {
+		display: none;
+	}
+}
+
+@include large-laptop {
+	.mkd-process-holder.mkd-process-horizontal {
+		.mkd-process-item-holder {
+			&.mkd-pi-highlighted {
+				.mkd-pi-image-holder {
+					width: 275px;
+					height: 275px;
+					margin-top: -20px;
+				}
+
+				.mkd-pi-holder-inner {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include laptop-landscape {
+	.mkd-process-holder.mkd-process-horizontal {
+		.mkd-process-bg-holder {
+			display: none;
+		}
+
+		.mkd-process-item-holder {
+			.mkd-pi-image-holder {
+				width: 171px;
+				height: 171px;
+			}
+
+			&.mkd-pi-highlighted {
+				.mkd-pi-image-holder {
+					width: 237px;
+					height: 237px;
+					margin-top: -30px;
+				}
+
+				.mkd-pi-holder-inner {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	.mkd-process-holder.mkd-process-horizontal {
+		&.mkd-process-holder-items-four {
+			.mkd-process-item-holder {
+				width: 50%;
+				margin-bottom: 30px;
+
+				&.mkd-pi-highlighted {
+					.mkd-pi-image-holder {
+						margin-top: 0;
+					}
+				}
+
+				.mkd-pi-holder-inner {
+					width: 100%;
+
+					.mkd-pi-content-holder {
+						padding: 0 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.mkd-process-holder.mkd-process-horizontal {
+		&.mkd-process-holder-items-three {
+			.mkd-process-item-holder {
+				&.mkd-pi-highlighted {
+					.mkd-pi-image-holder {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		.mkd-process-item-holder {
+			width: 100% !important;
+			margin-bottom: 30px;
+
+			.mkd-pi-holder-inner {
+				width: 100%;
+			}
+		}
+	}
+}

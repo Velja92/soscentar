@@ -1,0 +1,25 @@
+1.2.1
+- Updated Visual Composer to 5.2.1
+- Fixed potential security issue when saving theme options
+- Fixed the issue with YouTube and Vimeo on HTTPS websites
+
+1.2
+- Added WooCommerce 3.1.1 compatibility
+- Updated Visual Composer to 5.2
+- Updated Revolution Slider to 5.4.5.1
+- Updated Mikado Core plugin to version 1.2
+
+1.1.1
+- Fixed blog masonry list on IE browsers
+
+1.1
+- Added WooCommerce 2.6.8 compatibility
+- Updated Visual Composer to 5.0.1
+- Updated Revolution Slider to 5.3.0.2
+- Updated Mikado Core plugin to version 1.1
+- Fixed dynamic styles loading
+- Fixed anchor functionality when not using one page website
+- Fixing sending all fields on appointment form
+- Improved theme translation files
+
+

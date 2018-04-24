@@ -1,0 +1,24 @@
+@media only screen and (max-width: map-get($breakpoints, ipad-landscape)) {
+	.mkd-instagram-feed.mkd-col-9 li {
+		width: 33.33%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, ipad-portrait)) {
+	.mkd-instagram-feed.mkd-col-4 li {
+		width: 50%;
+	}
+
+	.mkd-instagram-feed.mkd-col-6 li {
+		width: 33.33%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-portrait)) {
+	.mkd-instagram-feed.mkd-col-4 li,
+	.mkd-instagram-feed.mkd-col-3 li,
+	.mkd-instagram-feed.mkd-col-6 li,
+	.mkd-instagram-feed.mkd-col-9 li {
+		width: 100%;
+	}
+}

@@ -1,0 +1,49 @@
+.mkd-video-banner-holder {
+	position: relative;
+
+	a {
+		display: block;
+		color: #fff;
+	}
+
+	img {
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	.mkd-video-banner-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(117, 117, 117, 0.14);
+		border: 5px solid #fff;
+
+		text-align: center;
+		font-size: 60px;
+
+		@include mkdTransition(background-color 0.2s ease-in-out);
+		@include mkdBoxSizing(border-box);
+		@include mkdBoxShadow(1px 2px 2px 0.5px $elements-box-shadow-color);
+	}
+
+	.mkd-vb-overlay-tb {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.mkd-vb-overlay-tc {
+		display: table-cell;
+		vertical-align: middle;
+		@include mkdTransition(all .2s cubic-bezier(0.18, 0.89, 0.32, 1.48));
+		will-change:transform;
+	}
+
+	&:hover {
+		.mkd-vb-overlay-tc {
+		 	@include mkdTransform(scale(1.1));
+		}
+	}
+}

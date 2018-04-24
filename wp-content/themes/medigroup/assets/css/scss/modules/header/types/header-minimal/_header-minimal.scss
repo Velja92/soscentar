@@ -1,0 +1,24 @@
+.mkd-header-minimal {
+
+	.mkd-page-header .mkd-menu-area {
+		background-color: #fff;
+		border-bottom: 1px solid #dee0e0;
+		box-sizing: border-box;
+		height: 92px;
+
+		.mkd-position-right-inner {
+			height: auto;
+		}
+
+	}
+
+	.mkd-page-header .mkd-sticky-header .mkd-position-left-inner {
+		height: auto;
+	}
+
+	&.mkd-header-minimal-border-disable .mkd-menu-area,
+	&.mkd-header-minimal-in-grid-border-disable .mkd-page-header .mkd-menu-area .mkd-grid .mkd-vertical-align-containers {
+		border-bottom: none;
+	}
+}
+

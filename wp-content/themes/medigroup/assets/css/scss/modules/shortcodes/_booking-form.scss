@@ -1,0 +1,566 @@
+.mkd-booking-form {
+	background-color: $first-main-color;
+	padding: 40px 50px 50px;
+	position: relative;
+
+	@include mkdTransition(background-color 0.2s ease-out);
+	@include mkdBoxSizing(border-box);
+
+	* {
+		@include mkdBoxSizing(border-box);
+	}
+
+	input[type=text]::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder {
+		color: #fff;
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+	input[type=text]:-moz-placeholder,
+	textarea:-moz-placeholder {
+		color: #fff;
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+	input[type=text]::-moz-placeholder,
+	textarea::-moz-placeholder {
+		color: #fff;
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+	input[type=text]:-ms-input-placeholder,
+	textarea:-ms-input-placeholder {
+		color: #fff;
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+	//	.select2-container.mkd-bf-select-doctor .select2-choice .select2-arrow:before {
+	//		content: '';
+	//	}
+
+	.select2-container .select2-choice .select2-arrow:before {
+		color: #fff;
+		top: 0px;
+		right: 14px;
+		position: absolute;
+		font-size: 8px;
+	}
+
+	.mkd-bf-motto {
+
+		h4 {
+			font-weight: 400;
+			color: #fff;
+			text-transform: none;
+		}
+	}
+
+	.mkd-bf-title {
+
+		h2 {
+			color: #fff;
+			font-size: 24px;
+			margin-bottom: 28px;
+		}
+	}
+
+	.mkd-bf-form-button {
+		margin-top: 14px;
+		@include mkdTransform(translateZ(0));
+		
+		.mkd-btn.mkd-btn-small {
+			font-size: 13px;
+			font-weight: 700;
+		}
+	}
+
+	.mkd-bf-form-item {
+		margin-top: 17px;
+		@include mkdTransform(translateZ(0));
+
+		&.mkd-bf-wide {
+			margin-top: 0;
+			padding-top: 14px; //must be same as above
+			clear: both;
+		}
+	}
+
+	.mkd-bf-form-item.mkd-bf-narrow {
+		position: relative;
+	}
+
+	.mkd-bf-form-item.mkd-date:after {
+		content: "\e025";
+		font-family: ElegantIcons;
+		font-size: 16px;
+		color: #fff;
+		position: absolute;
+		right: 17px;
+		top: 50%;
+
+		@include mkdTransform(translateY(-50%));
+	}
+
+	.mkd-bf-form-item.mkd-time:after {
+		content: "\7d";
+		font-family: ElegantIcons;
+		font-size: 16px;
+		color: #fff;
+		position: absolute;
+		right: 17px;
+		top: 50%;
+
+		@include mkdTransform(translateY(-50%));
+	}
+
+	.mkd-bf-form-item.mkd-bf-narrow .select2-container .select2-choice {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.select2-container .select2-choice {
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.select2-container {
+		margin: 0;
+	}
+
+	.select2-container.mkd-bf-select-field.mkd-bf-select-doctor,
+	.select2-container.mkd-bf-select-field.mkd-bf-select-department {
+		width: 100%;
+	}
+
+	.select2-container .select2-choice {
+		padding: 0;
+	}
+
+	.select2-container .select2-choice > .select2-chosen {
+		text-align: left;
+		color: #fff;
+		font-size: 13px;
+		margin-left: 16px;
+	}
+
+	.select2-container {
+
+		.select2-choice .select2-arrow {
+			top: 0px;
+			right: 0px;
+		}
+	}
+
+	.mkd-bf-input-date,
+	.mkd-bf-input-time,
+	.mkd-bf-input-name,
+	.mkd-bf-input-contact,
+	.mkd-bf-input-request {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		vertical-align: middle;
+		height: 45px;
+		line-height: 45px;
+		padding: 0;
+		font-family: inherit;
+		font-size: inherit;
+		color: #fff;
+		border-radius: 0;
+		background-color: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		padding-left: 16px;
+		-webkit-appearance: none;
+
+		@include mkdBoxShadow(none);
+	}
+
+	.mkd-bf-input-request {
+		height: 150px;
+		overflow: auto;
+		resize: none;
+	}
+
+	.mkd-bf-form-response-holder {
+		text-align: left;
+		width: 100%;
+		color: #fff;
+		display: none;
+	}
+
+	.mkd-booking-form-widget-button {
+		display: none;
+	}
+
+	.mkd-booking-form-inner {
+		background-color: inherit;
+	}
+
+	.mkd-bf-form-fields.mkd-bf-columns-2 {
+
+		.mkd-bf-narrow {
+			width: 50%;
+			float: left;
+
+			&:nth-child(odd) {
+				padding-right: 7px;
+
+				&.mkd-date:after {
+					right: 24px; // because of the padding above
+				}
+			}
+
+			&:nth-child(even) {
+				padding-left: 7px;
+			}
+		}
+	}
+
+	&.dark {
+
+		.mkd-bf-form-button {
+
+			.mkd-btn.mkd-btn-small {
+				padding: 9px 40px;
+				color: $first-main-color;
+			}
+		}
+	}
+
+	&.light {
+		background-color: #f7f7f7;
+
+		input[type=text]::-webkit-input-placeholder,
+		textarea::-webkit-input-placeholder {
+			color: #8f979d;
+		}
+
+		input[type=text]:-moz-placeholder,
+		textarea:-moz-placeholder {
+			color: #8f979d;
+		}
+
+		input[type=text]::-moz-placeholder,
+		textarea::-moz-placeholder {
+			color: #8f979d;
+		}
+
+		input[type=text]:-ms-input-placeholder,
+		textarea:-ms-input-placeholder {
+			color: #8f979d;
+		}
+
+		.mkd-bf-motto {
+
+			h4 {
+				color: $first-main-color;
+			}
+		}
+
+		.mkd-bf-title {
+
+			h2 {
+				color: #373737;
+			}
+		}
+
+		.mkd-bf-form-button {
+
+			.mkd-btn.mkd-btn-small {
+				color: #fff;
+				padding: 9px 40px;
+
+				@include mkdTransition(color 0.2s ease-out, background-color 0.2s ease-out, border 0.2s ease-out);
+
+				&:hover {
+					color: #fff;
+					background-color: #2fa1ee;
+					border: 2px solid #2fa1ee;
+				}
+			}
+		}
+
+		.mkd-bf-form-item.mkd-date:after,
+		.mkd-bf-form-item.mkd-time:after {
+			color: #989fa5;
+		}
+
+		.mkd-bf-form-item.mkd-bf-narrow .select2-container .select2-choice {
+			background-color: #fff;
+		}
+
+		.select2-container .select2-choice {
+			border: 1px solid #eae9e9;
+		}
+
+		.select2-container .select2-choice > .select2-chosen {
+			color: #8f979d;
+		}
+
+		.mkd-bf-input-date,
+		.mkd-bf-input-time,
+		.mkd-bf-input-name,
+		.mkd-bf-input-contact,
+		.mkd-bf-input-request {
+			color: #8f979d;
+			background-color: #fff;
+			border: 1px solid #eae9e9;
+		}
+		-moz-appearance: none;
+		appearance: none;
+
+		.mkd-bf-form-response-holder {
+			color: $first-main-color;
+		}
+
+		.select2-container .select2-choice .select2-arrow:before {
+			color: inherit;
+		}
+	}
+
+	&.mkd-bf-floating {
+		padding: 0;
+
+		.mkd-booking-form-inner {
+			position: absolute;
+			bottom: 0;
+			padding: 20px;
+			width: 360px;
+		}
+
+		&.mkd-bf-floating-left {
+			.mkd-booking-form-inner {
+				left: 0;
+				padding: 30px;
+				width: 380px;
+
+				.mkd-bf-form-button .mkd-btn {
+					width: 100%;
+				}
+
+				.mkd-bf-motto h4 {
+					margin-top: 0;
+				}
+			}
+		}
+
+		&.mkd-bf-floating-center {
+			.mkd-booking-form-inner {
+				left: 50%;
+				margin-left: -180px;
+			}
+		}
+
+		&.mkd-bf-floating-right {
+			.mkd-booking-form-inner {
+				right: 0;
+			}
+		}
+	}
+}
+
+.widget_mkd_booking_form_widget {
+	background-color: $first-main-color;
+	color: #fff;
+
+	&:hover .mkd-bf-layout-horizontal.dark a {
+		color: #fff !important;
+	}
+
+	.mkd-booking-form {
+
+		padding: 20px;
+
+		.mkd-bf-form-button {
+
+			.mkd-btn.mkd-btn-small {
+				width: 100%;
+			}
+		}
+
+		&.mkd-bf-layout-horizontal {
+			padding: 0 25px;
+
+			.mkd-booking-form-widget-button {
+				display: block;
+
+				a {
+					color: #fff;
+					font-size: 13px;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+			}
+
+			.mkd-booking-form-inner {
+				line-height: 35px;
+				display: none;
+				position: absolute;
+				top: 100%;
+				padding: 19px 0;
+
+				&.mkd-bf-bgnd-op-100 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 1.00);
+				}
+
+				&.mkd-bf-bgnd-op-95 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.95);
+				}
+
+				&.mkd-bf-bgnd-op-90 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.90);
+				}
+
+				&.mkd-bf-bgnd-op-85 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.85);
+				}
+
+				&.mkd-bf-bgnd-op-80 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.80);
+				}
+
+				&.mkd-bf-bgnd-op-75 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.75);
+				}
+
+				&.mkd-bf-bgnd-op-70 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.70);
+				}
+
+				&.mkd-bf-bgnd-op-65 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.65);
+				}
+
+				&.mkd-bf-bgnd-op-60 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.60);
+				}
+
+				&.mkd-bf-bgnd-op-55 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.55);
+				}
+
+				&.mkd-bf-bgnd-op-50 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.50);
+				}
+
+				&.mkd-bf-bgnd-op-45 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.45);
+				}
+
+				&.mkd-bf-bgnd-op-40 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.40);
+				}
+
+				&.mkd-bf-bgnd-op-35 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.35);
+				}
+
+				&.mkd-bf-bgnd-op-30 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.30);
+				}
+
+				&.mkd-bf-bgnd-op-25 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.35);
+				}
+
+				&.mkd-bf-bgnd-o0-20 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.20);
+				}
+
+				&.mkd-bf-bgnd-op-15 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.15);
+				}
+
+				&.mkd-bf-bgnd-op-10 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.10);
+				}
+
+				&.mkd-bf-bgnd-op-5 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.05);
+				}
+
+				&.mkd-bf-bgnd-op-0 {
+					background-color: rgba(map-get($first-main-color-rgba, red), map-get($first-main-color-rgba, green), map-get($first-main-color-rgba, blue), 0.00);
+				}
+			}
+
+			.mkd-bf-title {
+				float: left;
+				width: 10%;
+				text-align: left;
+				min-height: 1px;
+
+				h2 {
+					font-size: 16px;
+					margin-top: 0;
+					margin-bottom: 0;
+					line-height: inherit;
+				}
+			}
+
+			.mkd-bf-form-fields {
+				float: left;
+				width: 90%;
+
+				form {
+					position: relative;
+				}
+			}
+
+			.mkd-bf-form-item {
+				float: left;
+				width: 15%;
+				padding-left: 10px;
+				margin: 0;
+
+				&.mkd-date:after,
+				&.mkd-time:after {
+					right: 10px;
+				}
+			}
+
+			.mkd-bf-form-button {
+				float: left;
+				margin: 0;
+				width: 10%;
+				padding-left: 10px;
+
+				input {
+					height: 35px;
+					display: block;
+					font-size: 11px;
+					color: #555 !important;
+					padding: 0px 20px !important;
+				}
+			}
+
+			.mkd-bf-form-response-holder {
+				text-align: right;
+				float: right;
+				padding-top: 14px;
+			}
+
+			.mkd-bf-input-date,
+			.mkd-bf-input-time,
+			.mkd-bf-input-name,
+			.mkd-bf-input-contact,
+			.mkd-bf-input-request,
+			.select2-container .select2-choice {
+				display: block;
+				height: 35px;
+				line-height: 35px;
+			}
+
+			.select2-container {
+				display: block !important;
+
+			}
+		}
+	}
+}
+
+.xdsoft_datetimepicker {
+	font-family: $default-font-family;
+}

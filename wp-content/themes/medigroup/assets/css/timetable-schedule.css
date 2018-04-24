@@ -1,0 +1,309 @@
+/*------------------------------------------------------------------
+ * This is main Timetable css file. It is broken into following sections:
+ * 1.  Timetable styles
+ * 2.  Single event styles
+ * 3.  Widgets styles
+-------------------------------------------------------------------*/
+/* ==========================================================================
+   #Timetable styles
+   ========================================================================== */
+table.tt_timetable {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #808080;
+  font-size: 16px;
+  border-collapse: collapse !important;
+  border: 1px solid #ececec;
+  -webkit-box-shadow: 1px 1px 4.85px 0.15px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 1px 1px 4.85px 0.15px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 1px 4.85px 0.15px rgba(0, 0, 0, 0.12);
+}
+
+table.tt_timetable thead tr {
+  border: 1px solid #ececec;
+}
+
+table.tt_timetable tbody tr {
+  border: 1px solid #ececec;
+}
+
+table.tt_timetable th {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3e3e3e;
+  height: 75px;
+  border-right: 1px solid #ececec !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+table.tt_timetable td {
+  font-weight: 600;
+  color: #808080;
+  font-size: 14px;
+  border-right: 1px solid #ececec !important;
+}
+
+table.tt_timetable .row_gray {
+  background-color: transparent !important;
+}
+
+table.tt_timetable .event_container {
+  padding: 16px 16px 62px 16px;
+  text-align: left;
+}
+
+table.tt_timetable tbody tr:nth-child(even) {
+  background-color: #fff !important;
+}
+
+table.tt_timetable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9 !important;
+}
+
+table.tt_timetable .event {
+  background-color: transparent;
+  color: #808080;
+}
+
+table.tt_timetable .event .event_header {
+  color: #808080 !important;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+table.tt_timetable .event .before_hour_text,
+table.tt_timetable .event .after_hour_text {
+  font-size: 12px;
+  color: #6a767e;
+  font-weight: 400;
+}
+
+table.tt_timetable .event .top_hour {
+  margin-top: 5px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+table.tt_timetable .event .top_hour:after {
+  content: '-';
+  margin-left: 4px;
+}
+
+table.tt_timetable .event .bottom_hour {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+table.tt_timetable .event .event_container .hours {
+  color: #6a767e !important;
+}
+
+table.tt_timetable .event:not(.tt_single_event) .event_container {
+  border-bottom: 1px solid #ececec;
+}
+
+table.tt_timetable .event:not(.tt_single_event) .event_container:last-child {
+  border-bottom: none;
+}
+
+table.tt_timetable .event hr {
+  display: none;
+}
+
+table.tt_timetable .event:hover, table.tt_timetable .event .event_container.tt_tooltip:hover {
+  background-color: transparent;
+}
+
+table.tt_timetable .event.tt_tooltip:hover .hours, table.tt_timetable .event .event_container.tt_tooltip:hover .hours {
+  color: #808080;
+}
+
+table.tt_timetable .event a:hover, table.tt_timetable .event a.event_header:hover {
+  text-decoration: none;
+  color: #3498db !important;
+}
+
+table.tt_timetable .tt_tooltip_content {
+  color: #fff !important;
+  background: #3498db;
+  height: 100%;
+  margin: 0 15px;
+  padding: 15px;
+  font-size: 12px;
+  line-height: 23px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+table.tt_timetable .tt_tooltip_content > a {
+  display: none;
+}
+
+table.tt_timetable .tt_tooltip .tt_tooltip_arrow {
+  border-color: #3498db transparent;
+  position: absolute;
+  left: 38px;
+  border-width: 16px 16px 0;
+  bottom: -10px;
+}
+
+.tt_responsive .tt_timetable.small .box_header {
+  font-family: "Open Sans", sans-serif !important;
+  color: #808080 !important;
+  font-size: 20px !important;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.tt_responsive .tt_timetable.small .tt_items_list li {
+  border-color: #ececec;
+  padding: 15px 0 !important;
+}
+
+.tt_responsive .tt_timetable.small .tt_items_list .event_container {
+  text-align: left;
+}
+
+.tt_responsive .tt_timetable.small .tt_items_list a, .tt_responsive .tt_timetable.small .tt_items_list .value {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #808080 !important;
+}
+
+.tt_tabs {
+  text-align: center;
+}
+
+.tt_tabs .tt_timetable td {
+  height: 30px;
+}
+
+.tt_tabs .tt_tabs_navigation {
+  display: inline-block;
+  width: auto !important;
+  margin-bottom: 15px;
+}
+
+.tt_tabs .tt_tabs_navigation li {
+  margin-right: 15px !important;
+  margin-bottom: 15px !important;
+  float: none;
+  display: inline-block;
+}
+
+.tt_tabs .tt_tabs_navigation li a {
+  color: #fff !important;
+  background-color: #3498db;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid #3498db !important;
+  padding: 5px 15px !important;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+  -moz-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+}
+
+.tt_tabs .tt_tabs_navigation .ui-tabs-active a,
+.tt_tabs .tt_tabs_navigation li a:hover {
+  background-color: transparent;
+  border: 2px solid #3498db !important;
+  color: #3498db !important;
+}
+
+.tabs_box_navigation.sf-timetable-menu .tabs_box_navigation_selected {
+  color: #8f979d;
+  border-color: #eae9e9 !important;
+  background-color: transparent;
+}
+
+.tabs_box_navigation.sf-timetable-menu .tabs_box_navigation_selected:hover {
+  color: #8f979d;
+}
+
+.tabs_box_navigation.sf-timetable-menu .tabs_box_navigation_selected:before {
+  content: '\e874';
+  position: absolute;
+  right: 0;
+  right: 18px;
+  font-family: 'Linearicons-Free';
+}
+
+.tabs_box_navigation .tabs_box_navigation_icon {
+  display: none;
+}
+
+.sf-timetable-menu li:hover ul a, .sf-timetable-menu li.submenu:hover ul a {
+  color: #8f979d !important;
+  font-size: 15px;
+}
+
+.tabs_box_navigation label {
+  font-size: 15px !important;
+  line-height: 20px;
+}
+
+.sf-timetable-menu li ul li a:hover, .sf-timetable-menu li ul li.selected a:hover {
+  color: #8f979d !important;
+}
+
+ul.timetable_clearfix.tabs_box_navigation.events_categories_filter.tt_responsive.sf-timetable-menu,
+ul.timetable_clearfix.tabs_box_navigation.events_filter.tt_responsive.sf-timetable-menu {
+  margin: 0 0 65px 0 !important;
+  float: right !important;
+}
+
+.tt_tooltip .tt_tooltip_text {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform-origin: 50% 200%;
+  transform-origin: 50% 200%;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.18, 0.6, 0.01, 1.28), opacity 0.2s, visibility 0.2s;
+  transition: transform 0.3s cubic-bezier(0.18, 0.6, 0.01, 1.28), opacity 0.2s, visibility 0.2s;
+}
+
+.tt_tooltip:hover .tt_tooltip_text {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 1024px) {
+  .tt_responsive .tt_timetable.small {
+    display: block !important;
+  }
+  .tt_responsive .tt_timetable {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   #Single event styles
+   ==========================================================================
+@import 'timetable-schedule/single-event';
+
+/* ==========================================================================
+   #Widgets styles
+   ==========================================================================
+@import 'timetable-schedule/widgets';*/
+
+/*# sourceMappingURL=timetable-schedule.css.map */

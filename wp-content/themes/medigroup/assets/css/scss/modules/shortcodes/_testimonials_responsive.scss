@@ -1,0 +1,28 @@
+@media only screen and (max-width: map-get($breakpoints, laptop-landscape)) {
+
+	.mkd-testimonials-holder-inner .testimonials-grid.mkd-four-columns {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, ipad-portrait)) {
+
+	.mkd-testimonials-holder-inner .testimonials-grid.mkd-three-columns {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: map-get($breakpoints, phone-landscape)) {
+
+	.mkd-testimonials-holder-inner .testimonials-grid.mkd-two-columns {
+		width: 100%;
+	}
+
+	.mkd-testimonials-holder-inner .testimonials-grid.mkd-three-columns {
+		width: 100%;
+	}
+
+	.mkd-testimonials-holder-inner .testimonials-grid.mkd-four-columns {
+		width: 100%;
+	}
+}

@@ -1,0 +1,116 @@
+.mkd-info-box-holder {
+	//@todo responsive
+
+	color: #fff;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+
+	padding: 110px 0;
+	
+	//styles when placed in elements holder
+	.mkd-elements-holder & {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+	}
+
+	.mkd-elements-holder.mkd-two-columns & {
+		width: 50%;
+	}
+
+	.mkd-elements-holder.mkd-three-columns & {
+		width: 33%;
+	}
+
+	.mkd-elements-holder.mkd-four-columns & {
+		width: 25%;
+	}
+
+	.mkd-elements-holder.mkd-five-columns & {
+		width: 20%;
+	}
+
+	.mkd-elements-holder.mkd-six-columns & {
+			width: 16%;
+	}
+
+	&.mkd-info-box-with-image {
+		background-color: #0e0d0b;
+	}
+
+	.mkd-info-box-inner {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.mkd-ib-front-holder {
+		padding: 0 40px;
+		z-index: 3;
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+
+		.mkd-ib-icon-holder {
+			color: rgba(255, 255, 255, 0.28);
+			font-size: 72px;
+			margin-bottom: 35px;
+
+			@include mkdTransform(translate(0, -5px));
+		}
+
+		.mkd-ib-title {
+			color: #fff;
+			text-transform: uppercase;
+		}
+
+		.mkd-ib-button-holder {
+			margin-top: 35px;
+		}
+
+		.mkd-ib-text-holder {
+			font-size: 18px;
+			margin-top: 10px;
+
+			p {
+				margin: 0;
+			}
+		}
+
+		.mkd-ib-bottom-holder {
+			opacity: 0;
+			//top: 100%;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			padding: 0 20px;
+
+			@include mkdBoxSizing(border-box);
+		}
+	}
+
+	.mkd-ib-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background-color: #323232;
+
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&.mkd-info-box-with-image {
+		.mkd-ib-overlay {
+			opacity: 0.19;
+		}
+	}
+
+	&:hover {
+
+	}
+}

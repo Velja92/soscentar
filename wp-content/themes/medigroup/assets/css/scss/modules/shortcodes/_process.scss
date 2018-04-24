@@ -1,0 +1,159 @@
+.mkd-process-holder {
+	visibility: hidden;
+
+
+	.no-touch & {
+		.mkd-process-item-holder {
+			opacity: 0;
+		}
+	}
+
+	&.mkd-process-horizontal {
+		position: relative;
+		margin-top: 55px;
+
+		.mkd-process-inner {
+			@include mkdClearfix;
+		}
+
+		.mkd-process-bg-holder {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 120%;
+			height: 100%;
+			background: url('img/process-bg.png') no-repeat 50% 0;
+			z-index: -1;
+			opacity: 0;
+
+			margin: 0 -100px;
+		}
+
+		.mkd-process-item-holder {
+			text-align: center;
+			float: left;
+			width: 25%;
+
+			.mkd-pi-holder-inner {
+				width: 72.03947368421053%;
+			}
+
+			&.mkd-pi-highlighted {
+				.mkd-pi-image-holder {
+					width: 314px;
+					height: 314px;
+					margin-top: -38px;
+				}
+
+				.mkd-pi-holder-inner {
+					width: 100%;
+				}
+			}
+
+			&.mkd-pi-push-right {
+				.mkd-pi-holder-inner {
+					float: right;
+				}
+			}
+		}
+
+		&.mkd-process-holder-items-three {
+			.mkd-process-item-holder {
+				width: 33.33%;
+			}
+		}
+
+		&.mkd-process-multiple-highlights {
+			.mkd-pi-holder-inner {
+				width: 100%;
+			}
+		}
+
+		.mkd-pi-title-holder {
+			margin-bottom: 7px;
+		}
+
+		.mkd-pi-title {
+			margin: 0;
+		}
+
+		.mkd-pi-text-holder {
+			p {
+				margin: 0;
+			}
+		}
+
+		.mkd-pi-image-holder {
+			background-color: #f7f7f7;
+
+			display: inline-block;
+			width: 214px;
+			height: 214px;
+			border: 1px solid #e6e6e6;
+			padding: 10px;
+			margin-bottom: 20px;
+
+			overflow: hidden;
+
+			@include mkdBorderRadius(50%);
+			@include mkdBoxSizing(border-box);
+
+			img {
+				vertical-align: middle;
+				width: 100%;
+				border: 1px solid #e6e6e6;
+				@include mkdBorderRadius(50%);
+				@include mkdBoxSizing(border-box);
+			}
+		}
+	}
+
+	&.mkd-process-vertical {
+		.mkd-process-item-holder {
+			overflow: hidden;
+			position: relative;
+
+			&:not(:last-child):before {
+				content: '';
+				position: absolute;
+				top: 86px;
+				left: 42px;
+				border-left: 2px solid #f3f3f3;
+				height: 9999px;
+				width: 0px;
+				display: block;
+			}
+		}
+
+		.mkd-pi-image-holder {
+			position: relative;
+			width: 86px;
+			height: 86px;
+			border: 2px solid #f3f3f3;
+			float: left;
+			overflow: hidden;
+			text-align: center;
+			margin-bottom: 62px;
+
+			@include mkdBoxSizing(border-box);
+			@include mkdBorderRadius(50%);
+
+			img {
+				display: inline-block;
+				position: relative;
+				max-width: 100%;
+				top: 50%;
+
+				@include mkdTransform(translateY(-50%));
+			}
+		}
+		.mkd-pi-content-holder {
+			padding-left: 112px;
+
+			.mkd-pi-title {
+				margin-top: 7px;
+				margin-bottom: 13px;
+			}
+		}
+	}
+}

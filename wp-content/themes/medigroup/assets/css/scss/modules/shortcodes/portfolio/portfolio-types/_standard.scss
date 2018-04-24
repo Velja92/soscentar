@@ -1,0 +1,66 @@
+/* Portfolio standard styles - begin
+   ========================================================================== */
+.mkd-portfolio-list-holder-outer.mkd-ptf-standard {
+
+	article {
+		background-color: #fff;
+
+		&:hover  {
+			.mkd-ptf-item-image-holder img {
+			   @include mkdTransform(scale(1.05) translateZ(0));
+			}
+		}
+	}
+
+	.mkd-ptf-item-title {
+		margin-bottom: 12px;
+		font-weight: 600;
+	}
+
+	.mkd-ptf-item-text-holder {
+		padding: 30px 33px;
+	}
+
+	.mkd-ptf-item-excerpt p {
+		margin: 0;
+	}
+
+	.mkd-ptf-item-bottom {
+		position: relative;
+		padding-top: 9px;
+		border-top: 1px solid #f2f2f2;
+		margin-top: 17px;
+
+		.mkd-ptf-category-holder {
+			padding-right: 50px;
+		}
+
+		.mkd-like {
+			position: absolute;
+			right: 0;
+			top: 10px;
+		}
+	}
+
+	.mkd-ptf-category-holder {
+		font-family: $headings-font-family;
+		color: #808080;
+		font-weight: 700;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+	.mkd-ptf-item-image-holder  {
+	    overflow:hidden;    
+
+	    img {
+	    	display: block;
+    	    @include mkdTransition(all .3s);
+    	    @include mkdTransform(translateZ(0));
+    	    backface-visibility:hidden;
+    	}
+	}
+}
+
+/* Portfolio standard styles - end
+   ========================================================================== */

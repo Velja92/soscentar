@@ -1,0 +1,57 @@
+@import 'types/fullscreen-search';
+@import 'types/search-covers-header';
+@import 'types/search-dropdown';
+@import 'types/slide-from-header-bottom';
+@import 'types/slide-from-window-top';
+
+/* ==========================================================================
+# Search style - begin
+========================================================================== */
+
+.mkd-search-opener {
+	@include mkdTransition(all 0.15s ease-out);
+
+	.mkd-search-icon-text {
+		@include mkdTransition(all 0.15s ease-out);
+	}
+}
+
+.mkd-light-header .mkd-page-header > div:not(.mkd-sticky-header) .mkd-search-opener,
+.mkd-dark-header.mkd-logo-light-header .mkd-page-header > .mkd-logo-area .mkd-search-opener,
+.mkd-logo-light-header .mkd-page-header > .mkd-logo-area .mkd-search-opener,
+.mkd-dark-header.mkd-menu-light-header .mkd-page-header > .mkd-menu-area .mkd-search-opener,
+.mkd-menu-light-header .mkd-page-header > .mkd-menu-area .mkd-search-opener,
+.mkd-light-header.mkd-header-style-on-scroll .mkd-page-header .mkd-search-opener,
+.mkd-top-bar-light .mkd-top-bar .mkd-search-opener {
+	color: $header-light-color !important; //Color can be set inline from widget opener
+}
+
+.mkd-dark-header .mkd-page-header > div:not(.mkd-sticky-header) .mkd-search-opener,
+.mkd-light-header.mkd-logo-dark-header .mkd-page-header > .mkd-logo-area .mkd-search-opener,
+.mkd-logo-dark-header .mkd-page-header > .mkd-logo-area .mkd-search-opener,
+.mkd-light-header.mkd-menu-dark-header .mkd-page-header > .mkd-menu-area .mkd-search-opener,
+.mkd-menu-dark-header .mkd-page-header > .mkd-menu-area .mkd-search-opener,
+.mkd-dark-header.mkd-header-style-on-scroll .mkd-page-header .mkd-search-opener,
+.mkd-top-bar-dark .mkd-top-bar .mkd-search-opener
+{
+	color: $header-dark-color !important; //Color can be set inline from widget opener
+}
+
+@include mkdPlaceholder {
+	color: #959595;
+	margin-top: 10px;
+}
+
+.search .format-quote h2.mkd-post-title,
+.search .format-link h2.mkd-post-title {
+	color: #fff;
+}
+
+.search .format-quote h2.mkd-post-title a:hover,
+.search .format-link h2.mkd-post-title a:hover {
+	color: #fff;
+}
+
+/* ==========================================================================
+# Search style - end
+========================================================================== */

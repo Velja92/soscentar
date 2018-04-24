@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) and (min-width: 500px){
+	.owl-item:nth-child(3n) .mkd-carousel-item-outer-holder {
+		border-right: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 668px) and (min-width: 500px) {
+	.owl-item:nth-child(2n) .mkd-carousel-item-outer-holder {
+		border-right: 0 !important;
+	}
+}
+
+@media only screen and (max-width: 499px) {
+	.owl-item:nth-child(n) .mkd-carousel-item-outer-holder {
+		border-right: 0 !important;
+	}
+}

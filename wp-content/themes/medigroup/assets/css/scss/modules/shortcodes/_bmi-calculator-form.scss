@@ -1,0 +1,302 @@
+.mkd-bmi-calculator-holder {
+	@include createGridRow(23px);
+
+	.mkd-bmic-table-holder {
+		margin-bottom: 20px;
+
+		.mkd-section-title-holder {
+			margin-bottom: 30px;
+			text-transform: uppercase;
+		}
+	}
+
+	.mkd-bmic-form-holder {
+
+		.select2-container {
+			margin: 0;
+		}
+
+		.select2-container .select2-choice > .select2-chosen {
+			text-align: left;
+			padding-left: 22px;
+		}
+
+		.select2-container .select2-choice .select2-arrow {
+			right: 16px;
+			font-size: 11px;
+		}
+
+		.mkd-section-subtitle {
+			margin-bottom: 33px;
+		}
+
+		.mkd-section-title-holder {
+			margin-bottom: 20px;
+			text-transform: uppercase;
+
+			h3 {
+				margin-bottom: 0;
+			}
+		}
+
+		.mkd-bmic-form {
+			margin-top: 30px;
+		}
+
+		@include ipad-landscape {
+			margin-bottom: 20px;
+		}
+	}
+
+	table {
+		border: 1px solid #e5e5e5;
+
+		thead {
+			font-family: $headings-font-family;
+			font-size: 16px;
+			color: #373737;
+			text-transform: uppercase;
+			background-color: #f7f7f7;
+
+			tr {
+				border: none;
+
+				border-bottom: 1px solid #e5e5e5;
+			}
+
+			th {
+				font-weight: 600;
+			}
+		}
+
+		th {
+			text-align: left;
+			padding: 18px 20px 18px 40px;
+
+			@include phone-portrait {
+				padding: 18px 20px;
+			}
+		}
+
+		td {
+			text-align: left;
+			padding: 17px 20px 17px 40px;
+
+			&:first-child {
+				width: 35%;
+			}
+
+			&:last-child {
+				width: 65%;
+			}
+
+			@include phone-portrait {
+				padding: 17px 20px;
+			}
+		}
+
+		tbody tr {
+			border: none;
+
+			border-bottom: 1px solid #e5e5e5;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		thead tr,
+		tbody tr {
+			td, th {
+				border-right: 1px solid #e5e5e5;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
+	}
+
+	.mkd-bmic-legend {
+		margin-top: 13px;
+		color: #b7b7b7;
+
+		sup {
+			color: $first-main-color;
+		}
+	}
+
+	.mkd-bmic-table-holder,
+	.mkd-bmic-form-holder {
+		@include createGridColumn(6, 23px);
+		@include createGridColumnResponsive(ipad-landscape);
+	}
+
+	input[type=text],
+	textarea,
+	select {
+		@include inputStyle;
+
+		margin-bottom: 0;
+	}
+
+	.select2-container {
+		width: 100%;
+
+		.select2-choice {
+			line-height: 49px;
+			height: 49px;
+			font-size: 14px;
+			color: #969696;
+
+			background-color: #f7f7f7;
+			border: 1px solid #eae9e9;
+
+			@include mkdBoxShadow(none);
+			@include mkdTransition(border-color 0.2s ease-out);
+		}
+
+		&.select2-container-active {
+			.select2-choice {
+				border-color: $first-main-color;
+			}
+		}
+	}
+
+	.mkd-bmic-form-row {
+		@include createGridRow(13.5px);
+
+		.mkd-bmic-form-col {
+			@include createGridColumn(6, 13.5px);
+			@include createGridColumnResponsive(phone-landscape);
+
+			margin-bottom: 17px;
+		}
+	}
+
+	.mkd-bmic-submit-row {
+		margin-top: 30px;
+	}
+
+	.mkd-bmic-form-col-full {
+		@include createGridColumn(12, 13.5px);
+	}
+
+	.mkd-bmic-notifications-col {
+		@include createGridColumn(12, 23px);
+
+		margin-top: 45px;
+		font-size: 14px;
+	}
+
+	.mkd-bmic-notifications {
+		background-color: #ecf4fa;
+		padding: 26px 22px;
+
+		position: relative;
+		display: none;
+
+		.mkd-bmic-notification-highlight {
+			font-family: $headings-font-family;
+			color: #303030;
+			font-size: 18px;
+			font-weight: 700;
+
+			margin-right: 20px;
+		}
+
+		.mkd-bmic-notification-text {
+			padding-left: 61px;
+		}
+
+		.mkd-bmic-icon-holder span {
+			width: 50px;
+			height: 60px;
+			display: block;
+			position: absolute;
+			left: 13px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			-o-background-size: 60px 60px;
+			-webkit-background-size: 60px 60px;
+			-moz-background-size: 60px 60px;
+			background-size: 60px 60px;
+		}
+
+		.mkd-bmic-overweight {
+			background: url(img/overweight.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 150/100), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 160dpi) {
+				background: url('img/overweightx1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min--moz-device-pixel-ratio: 2.0), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2.0), only screen and (min-resolution: 210dpi) {
+				background: url('img/overweightx2.png') no-repeat;
+			}
+		}
+
+		.mkd-bmic-obese {
+			background: url(img/obese.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 150/100), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 160dpi) {
+				background: url('img/obesex1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min--moz-device-pixel-ratio: 2.0), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2.0), only screen and (min-resolution: 210dpi) {
+				background: url('img/obesex2.png') no-repeat;
+			}
+		}
+
+		.mkd-bmic-normal {
+			background: url(img/normal.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 150/100), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 160dpi) {
+				background: url('img/normalx1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min--moz-device-pixel-ratio: 2.0), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2.0), only screen and (min-resolution: 210dpi) {
+				background: url('img/normalx2.png') no-repeat;
+			}
+		}
+
+		.mkd-bmic-underweight {
+			background: url(img/underweight.png) no-repeat top;
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 150/100), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 160dpi) {
+				background: url('img/underweightx1.5.png') no-repeat;
+			}
+
+			@media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min--moz-device-pixel-ratio: 2.0), only screen and (-o-min-device-pixel-ratio: 200/100), only screen and (min-device-pixel-ratio: 2.0), only screen and (min-resolution: 210dpi) {
+				background: url('img/underweightx2.png') no-repeat;
+			}
+		}
+
+		&.mkd-bmic-notification-error {
+			background-color: #ec9e8f;
+			color: #fff;
+
+			.mkd-bmic-notification-text {
+				padding-left: 0;
+			}
+		}
+
+		.mkd-bmic-notification-close {
+			position: absolute;
+			right: 20px;
+			width: 24px;
+			height: 24px;
+			font-size: 24px;
+			color: inherit;
+
+			top: 50%;
+
+			@include mkdTransform(translateY(-50%));
+
+			&:after {
+				content: '\4d';
+				font-family: 'ElegantIcons';
+			}
+		}
+	}
+}

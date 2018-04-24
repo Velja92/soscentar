@@ -1,0 +1,31 @@
+@include ipad-landscape {
+    .mkd-tab-slider-holder {
+
+        .mkd-tab-slide-holder .mkd-tab-slide-image,
+        .mkd-tab-slide-holder .mkd-tab-slide-content {
+            display: block;
+            width: 100%;
+        }
+
+        .mkd-tab-slide-holder .mkd-tab-slide-image{
+            background: none;
+
+            img{
+                display: block;
+            }
+        }
+
+        .mkd-tab-slide-holder .mkd-tab-slide-content {
+            padding: 30px 30px 20px;
+        }
+    }
+}
+
+@include ipad-portrait {
+    .mkd-tab-slider-holder {
+
+        .mkd-tab-slider-nav {
+            display: none;
+        }
+    }
+}

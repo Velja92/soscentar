@@ -1,0 +1,69 @@
+/* ==========================================================================
+   WooCommerce Buttons styles - begin
+   ========================================================================== */
+
+.woocommerce-page .mkd-content,
+div.woocommerce {
+
+    a.button,
+    a.added_to_cart,
+    input[type="submit"],
+    button[type="submit"] {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: 41px;
+        line-height: 41px;
+        padding: 0 26px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        background-color: $first-main-color;
+        border: 0;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        vertical-align: middle;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        @include mkdBoxSizing(border-box);
+        @include mkdTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+        &:hover {
+            color: #fff;
+            background-color: $first-main-color;
+        }      
+    }
+
+    a.button.added {
+        display: none;
+    }
+
+    .wc-forward:not(.added_to_cart):not(.checkout-button) {
+        position: relative;
+        display: inline;
+        vertical-align: inherit;
+        width: auto;
+        line-height: inherit;
+        font-size: inherit;
+        font-weight: 700;
+        text-transform: none;
+        padding: 0;
+        padding-left: 10px;
+	    background-color: transparent;
+	    color: $first-main-color;
+        border: 0;
+        outline: none;
+        -webkit-appearance: none;
+        @include mkdTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+        @include mkdBoxSizing(border-box);
+
+        &:hover {
+	        background-color: transparent;
+	        color: $first-main-color;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Buttons styles - end
+   ========================================================================== */

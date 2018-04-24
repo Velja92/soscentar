@@ -1,0 +1,179 @@
+.mkd-doctor-single-holder {
+
+	.mkd-doctor-single-info {
+		color: #777;
+
+		h6,
+		p {
+			line-height: 26px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		h6 {
+			font-weight: 600;
+			color: #303030;
+			@include mkdTransition(color .3s ease-out);
+		}
+
+		.mkd-doctor-info-item {
+			background-color: #fff;
+			padding: 15px 0;
+			border-top: 1px solid #ebebeb;
+			@include mkdBoxSizing(border-box);
+			@include mkdTransition(background-color .3s ease-out);
+
+			&:last-child {
+				border-bottom: 1px solid #ebebeb;
+			}
+
+			.mkd-doctor-info-item-inner {
+				position: relative;
+
+				&.mkd-training,
+				&.mkd-contact {
+					padding: 12px 0;
+				}
+
+				&.mkd-working-days {
+					padding: 10px 0;
+				}
+
+			}
+
+			&:hover {
+				background-color: #f9f9f9;
+
+				.mkd-doctor-info-item-left {
+					h6 {
+						color: $first-main-color;
+					}
+				}
+			}
+		}
+
+		.mkd-doctor-info-item-left {
+			float: left;
+			width: 35%;
+			padding-left: 22px;
+			@include mkdBoxSizing(border-box);
+		}
+
+		.mkd-doctor-info-item-right {
+			float: left;
+			width: 65%;
+			padding-right: 22px;
+			@include mkdBoxSizing(border-box);
+		}
+
+		.mkd-doctor-checkmark {
+			font-size: 16px;
+			color: #8bc0df;
+			position: relative;
+			top: 2px;
+			margin-right: 5px;
+		}
+
+		.mkd-doctor-workday {
+			margin-right: 10px;
+		}
+
+		.mkd-doctor-contact-block {
+			float: left;
+			position: relative;
+			height: 52px;
+			margin-right: 55px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.mkd-dcb-icon-holder,
+			.mkd-dcb-text-holder {
+				float: left;
+			}
+
+			.mkd-dcb-icon-holder {
+				height: 100%;
+				padding-right: 8px;
+
+				.mkd-dcb-icon {
+					font-size: 34px;
+					color: #8bc0df;
+					position: relative;
+					top: 4px;
+					left: -8px;
+				}
+			}
+
+			.mkd-dcb-text-holder {
+
+				h6, p {
+					margin: 0;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+
+	.mkd-doctor-single-team {
+		margin-top: 57px;
+
+		h3 {
+			font-weight: 600;
+			margin-bottom: 24px;
+		}
+
+		.mkd-team-slider {
+			margin: 44px -12px 0 -12px;
+		}
+
+	}
+
+}
+
+.single.single-doctor {
+	.mkd-title-subtitle-holder-inner {
+		text-align: center;
+	}
+
+	.mkd-content .mkd-content-inner > .mkd-container > .mkd-container-inner,
+	.mkd-content .mkd-content-inner > .mkd-full-width > .mkd-full-width-inner {
+		padding: 90px 0;
+	}
+
+	.mkd-doctor-title-image {
+		margin-bottom: 22px;
+
+		img {
+			width: 200px;
+			border: 7px solid #f9f9f9;
+
+			@include mkdBoxShadow(1px 2px 2px 0.5px rgba(0, 0, 0, 0.08));
+			@include mkdBorderRadius(50%);
+		}
+	}
+
+	.mkd-title .mkd-title-holder .mkd-subtitle {
+		width: 100%;
+	}
+
+	.mkd-title .mkd-title-holder h1 {
+		font-size: 24px;
+	}
+
+	.mkd-title .mkd-title-holder .mkd-subtitle span {
+		font-weight: 600;
+		color: #6a767e;
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-top: 21px;
+	}
+
+}

@@ -1,0 +1,62 @@
+/* ==========================================================================
+# Icon List Item style - begin
+========================================================================== */
+.mkd-icon-list-item {
+	width: 100%;
+	position: relative;
+	margin-bottom: 22px;
+
+	.mkd-icon-list-icon-holder {
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 24px;
+		min-width: 13px;
+		color: $first-main-color;
+		text-align: center;
+	}
+
+	.mkd-icon-list-text {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		padding-left: 10px;
+		color: #6a767e;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	&.mkd-icon-list-item-headings-font-family .mkd-icon-list-text {
+		font-family: $headings-font-family;
+	}
+
+	.mkd-top-bar & {
+		display: block;
+		height: auto;
+		margin-bottom: 0;
+
+		.mkd-icon-list-text {
+			padding-left: 13px;
+			font-size: 12px;
+			color: #cacaca;
+			font-weight: 600;
+		}
+
+		.mkd-icon-list-icon-holder-inner i,
+		.mkd-icon-list-icon-holder-inner .font_elegant {
+			color: #cacaca;
+
+			.mkd-top-bar-light & {
+				color: $header-light-color;
+			}
+
+			.mkd-top-bar-dark & {
+				color: $header-dark-color;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Icon List Item style - end
+========================================================================== */
+

@@ -1,0 +1,21 @@
+@include ipad-landscape {
+	.mkd-blog-list-holder {
+		&.mkd-four-columns > ul > li {
+			width: 50%;
+		}
+	}
+}
+
+@include ipad-portrait {
+	.mkd-blog-list-holder {
+		&.mkd-two-columns > ul > li,
+		&.mkd-three-columns > ul > li,
+		&.mkd-four-columns > ul > li {
+			width: 100%;
+		}
+	}
+
+	.mkd-blog-list-holder.mkd-minimal .mkd-blog-list-item {
+		padding: 10px 0 10px;
+	}
+}

@@ -1,0 +1,89 @@
+/* ==========================================================================
+# Countdown style - begin
+========================================================================== */
+/* jQuery Countdown styles 2.0.0. */
+.mkd-countdown {
+	font-weight: 700;
+
+	.countdown-rtl {
+		direction: rtl;
+	}
+
+	.countdown-row {
+		clear: both;
+		width: 100%;
+		padding: 0 2px;
+		text-align: center;
+	}
+
+	.countdown-show1 .countdown-section {
+		width: 98%;
+	}
+
+	.countdown-show2 .countdown-section {
+		width: 48%;
+	}
+
+	.countdown-show3 .countdown-section {
+		width: 32.5%;
+	}
+
+	.countdown-show4 .countdown-section {
+		width: 24.5%;
+	}
+
+	.countdown-show5 .countdown-section {
+		width: 19.5%;
+	}
+
+	.countdown-show6 .countdown-section {
+		width: 16.25%;
+	}
+
+	.countdown-show7 .countdown-section {
+		width: 14%;
+	}
+
+	.countdown-section {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		font-weight: inherit;
+	}
+
+	.countdown-amount {
+		display: block;
+		position: relative;
+		font-size: 62px;
+		line-height: 1em;
+		font-weight: 600;
+		font-family: $headings-font-family;
+		margin-bottom: 25px;
+		color: $first-main-color;
+	}
+
+	.countdown-period {
+		display: block;
+		margin-top: 5px;
+		font-size: 16px;
+		font-weight: 600;
+		color: $first-main-color;
+		text-transform: uppercase;
+	}
+
+	.countdown-descr {
+		display: block;
+		width: 100%;
+	}
+
+	&.mkd-light {
+		.countdown-amount,
+		.countdown-period {
+			color: $default-background-color;
+		}
+	}
+}
+
+/* ==========================================================================
+# Countdown style - end
+========================================================================== */

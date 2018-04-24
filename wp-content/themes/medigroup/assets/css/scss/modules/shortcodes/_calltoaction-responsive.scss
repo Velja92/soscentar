@@ -1,0 +1,73 @@
+/* ==========================================================================
+# Call to action responsive style - begin
+========================================================================== */
+
+.mkd-call-to-action {
+
+	.mkd-call-to-action-row-75-25 .mkd-call-to-action-column1 {
+
+		@media only screen and (min-width: map-get($breakpoints, phone-landscape)) and (max-width: map-get($breakpoints, ipad-landscape)) {
+			width: 65%;
+		}
+
+	}
+
+	.mkd-call-to-action-row-75-25 .mkd-call-to-action-column2 {
+
+		@media only screen and (min-width: map-get($breakpoints, phone-landscape)) and (max-width: map-get($breakpoints, ipad-landscape)) {
+			width: 35%;
+		}
+
+	}
+
+	.mkd-call-to-action-cell {
+
+		@include phone-landscape {
+			display: block;
+			text-align: center !important;
+			width: 100% !important;
+		}
+
+	}
+
+	.mkd-text-wrapper .mkd-call-to-action-icon-holder {
+
+		@include phone-landscape {
+			position: relative;
+			width: 100%;
+			text-align: center;
+		}
+
+	}
+
+	.mkd-text-wrapper .mkd-call-to-action-icon {
+
+		@include phone-landscape {
+			display: inline-block;
+		}
+
+	}
+
+	.mkd-text-wrapper .mkd-call-to-action-text {
+
+		@include phone-landscape {
+			text-align: center;
+			margin-bottom: 10px;
+			padding: 0 !important;
+		}
+
+	}
+
+}
+
+.mkd-call-to-action.with-icon {
+
+	@include phone-landscape {
+		padding: 0;
+	}
+
+}
+
+/* ==========================================================================
+# Call to action responsive style - end
+========================================================================== */

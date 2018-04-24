@@ -1,0 +1,116 @@
+.mkd-search-dropdown {
+	.widget_mkd_search_opener {
+		cursor: pointer;
+		height: 100%;
+		display: table;
+	}
+
+	.mkd-search-dropdown-holder {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		padding: 13px 13px 10px 11px;
+		width: 377px;
+		height: 65px;
+		z-index: 10;
+		opacity: 0;
+		visibility: hidden;
+
+		background-color: #fff;
+		border: 1px solid #f2f2f2;
+
+		line-height: $default-text-line-height;
+
+		@include mkdBoxSizing(border-box);
+		@include mkdTransition(visibility 0s linear 0.2s, opacity 0.2s ease-in-out 0s);
+
+		input[type=text] {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			width: 71%;
+			display: block;
+
+			font-family: $default-font-family;
+			font-size: 12px;
+			color: #969696;
+			float: left;
+			background-color: #f7f7f7;
+			line-height: 41px;
+			height: 41px;
+            padding: 0px 10px;
+
+			@include mkdBoxSizing(border-box);
+
+			@include mkdPlaceholder {
+				color: #969696;
+				opacity: 1;
+			}
+
+			.mkd-dark-header,
+			.mkd-light-header,
+			.mkd-top-bar-dark,
+			.mkd-top-bar-light {
+				@include mkdPlaceholder {
+					color: #969696;
+					opacity: 1;
+				}
+			}
+		}
+
+		input[type=submit] {
+			float: left;
+			width: 29%;
+			min-width: auto;
+			padding: 8px 0;
+			font-weight: 600;
+            border: 0;
+            height: 41px;
+		}
+
+		@include mkdPlaceholder {
+			font-size: 11px;
+			font-weight: 400;
+		}
+
+		//input[type=text]::-webkit-input-placeholder {
+		//	font-size: 11px;
+		//	font-weight: 400;
+		//}
+		//
+		//input[type=text]::-moz-placeholder {
+		//	font-size: 11px;
+		//	font-weight: 400;
+		//}
+		//
+		//input[type=text]:-moz-placeholder {
+		//	font-size: 11px;
+		//	font-weight: 400;
+		//}
+		//
+		//input[type=text]:-ms-input-placeholder {
+		//	font-size: 11px;
+		//	font-weight: 400;
+		//}
+	}
+
+	&.mkd-header-standard-border-disable .mkd-search-dropdown-holder {
+		top: 100%;
+	}
+
+	.widget_mkd_search_opener:hover .mkd-search-dropdown-holder {
+		opacity: 1;
+		visibility: visible;
+
+		@include mkdTransitionDelay(0s);
+	}
+}
+
+.mkd-top-bar {
+	.mkd-position-left {
+		.mkd-search-dropdown-holder {
+			left: 0;
+			right: auto;
+		}
+	}
+}

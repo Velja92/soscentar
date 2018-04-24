@@ -1,0 +1,21 @@
+.mkd-icon-progress-bar {
+	.mkd-ipb-icon {
+		display: inline-block;
+		margin-bottom: 20px;
+
+		.mkd-ipb-icon-elem {
+			margin-right: 20px;
+		}
+
+
+		&:last-child {
+			.mkd-ipb-icon-elem {
+				margin-right: 0 !important;
+			}
+		}
+	}
+
+	.mkd-ipb-active {
+		color: $first-main-color;
+	}
+}

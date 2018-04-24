@@ -1,0 +1,86 @@
+$top-bar-height: 46px;
+
+.mkd-top-bar {
+	width: 100%;
+	background-color: #fff;
+	color: #555;
+	position: relative;
+	font-weight: 600;
+	height: $top-bar-height;
+	font-size: 12px;
+	z-index: 111;
+	border-bottom: 1px solid #eae9e9;
+
+	.mkd-grid {
+		height: 100%;
+
+		.mkd-vertical-align-containers {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.mkd-top-bar-widget-area,
+	.mkd-top-bar-widget-area-inner {
+		height: 100%;
+	}
+
+	.mkd-top-bar-widget {
+		display: table;
+		float: left;
+		height: 100%;
+
+		padding-right: 24px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		&.widget_text {
+			position: relative;
+		}
+	}
+
+	.mkd-top-bar-widget-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.mkd-logo-wrapper a {
+		max-height: $top-bar-height;
+	}
+}
+
+.mkd-top-bar-light .mkd-top-bar {
+	color: $header-light-color; //Beacause of inline color styles
+
+	.widget {
+		color: $header-light-color; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-light-color; //Beacause of inline color styles
+		}
+
+	}
+}
+
+.mkd-top-bar-dark .mkd-top-bar {
+	color: $header-dark-color; //Beacause of inline color styles
+
+	.widget {
+		color: $header-dark-color; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-dark-color; //Beacause of inline color styles
+		}
+
+	}
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+# Portfolio Single Big Images - begin
+========================================================================== */
+
+.mkd-portfolio-single-holder.big-images {
+
+	.mkd-big-image-holder {
+		margin-bottom: 45px;
+	}
+
+	.mkd-portfolio-single-media {
+		margin-bottom: 38px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.mkd-portfolio-item-content {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+}
+
+/* ==========================================================================
+# Portfolio Single Big Images - end
+========================================================================== */

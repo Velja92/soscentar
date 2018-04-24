@@ -1,0 +1,156 @@
+/* ==========================================================================
+# Pricing table style - begin
+========================================================================== */
+
+.mkd-pricing-tables.mkd-two-columns .mkd-price-table {
+	width: 50%;
+}
+
+.mkd-pricing-tables.mkd-three-columns .mkd-price-table {
+	width: 33.33%;
+}
+
+.mkd-pricing-tables.mkd-four-columns .mkd-price-table {
+	width: 25%;
+}
+
+.no-touch .mkd-pricing-tables.mkd-appear-effect-yes {
+	.mkd-price-table {
+		opacity: 0;
+		@include mkdTransform(translate3d(0, 80px, 0));
+		-webkit-transition: opacity .2s ease, -webkit-transform .4s cubic-bezier(0.24, 0.58, 0.18, 1.48);
+		transition: opacity .2s ease, transform .4s cubic-bezier(0.24, 0.58, 0.18, 1.48);
+
+		&.mkd-appeared {
+			opacity: 1;
+			@include mkdTransform(translate3d(0, 0, 0));
+		}
+	}
+}
+
+.mkd-price-table {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	padding: 0 11px;
+	float: left;
+
+	@include mkdBoxSizing(border-box);
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.mkd-price-table .mkd-price-table-inner {
+	background-color: #fff;
+	border: 1px solid #f2f2f2;
+	text-align: center;
+	padding: 60px 35px 55px;
+
+	@include mkdBoxSizing(border-box);
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.mkd-title-content,
+	.mkd-price {
+		margin: 0;
+	}
+
+	.mkd-title-content {
+		color: #3e3e3e;
+		font-size: 22px;
+	}
+
+	.mkd-price {
+		color: #605e5e;
+	}
+
+	.mkd-table-title {
+		margin-bottom: 20px;
+	}
+
+	.mkd-price-in-table {
+		margin-bottom: 6px;
+	}
+
+	.mkd-pt-price-period {
+		font-family: $headings-font-family;
+		font-size: 16px;
+		color: #ababab;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.mkd-table-content {
+		margin-top: 28px;
+
+		font-size: 16px;
+		font-weight: 400;
+		color: #808080;
+		line-height: 40px;
+	}
+
+	.mkd-price-button {
+		margin-top: 28px;
+	}
+
+	.mkd-pt-label-holder {
+		position: absolute;
+		top: -18px;
+		right: 64px;
+
+		.mkd-pt-label-inner {
+			background-color: $first-main-color;
+			padding: 5px 15px 5px 18px;
+
+			color: #fff;
+			font-family: $headings-font-family;
+			color: #fff;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+
+			@include mkdTransform(rotate(-90deg) perspective(1px));
+			@include mkdTransformOrigin(right);
+			@include mkdBoxSizing(border-box);
+		}
+	}
+
+	.mkd-pt-label-content {
+		@include mkdTransform(rotate(180deg) translateZ(0));
+		@include mkdTransformOrigin(center);
+	}
+}
+
+.mkd-price-table.mkd-pt-active {
+	.mkd-price-table-inner {
+		background-color: $first-main-color;
+		border-color: transparent;
+
+		color: #fff;
+
+		.mkd-title-content,
+		.mkd-pt-price-period,
+		.mkd-table-content,
+		.mkd-price {
+			color: inherit;
+		}
+
+		.mkd-pt-label-inner {
+			background-color: #fff;
+			color: #545454;
+		}
+	}
+}
+
+/* ==========================================================================
+# Pricing table style - end
+========================================================================== */

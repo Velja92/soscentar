@@ -1,0 +1,166 @@
+.mkd-card-slider {
+
+	&[data-columns='3'] {
+		.mkd-card {
+			opacity: 0;
+			@include mkdTransform(translate3d(0, 80px, 0));
+			-webkit-transition: opacity .2s ease, -webkit-transform .4s cubic-bezier(0.24, 0.58, 0.18, 1.48);
+			transition: opacity .2s ease, transform .4s cubic-bezier(0.24, 0.58, 0.18, 1.48);
+
+			&.mkd-appeared {
+				opacity: 1;
+				@include mkdTransform(translate3d(0, 0, 0));
+			}
+		}
+	}
+
+	.mkd-card-slider-inner {
+		visibility: hidden;
+	}
+
+	.mkd-card {
+
+		div,
+		img,
+		a {
+			position: relative;
+		}
+
+		.mkd-card-inner {
+			text-align: center;
+		}
+
+		.mkd-card-image-holder {
+
+			.mkd-card-image-wrapper {
+
+			}
+
+			.mkd-card-behind-image {
+				position: absolute;
+				width: 100%;
+				height: 50%;
+				bottom: 0;
+			}
+
+			.mkd-card-image {
+				vertical-align: middle;
+				display: inline-block;
+			}
+
+			.mkd-card-below-image {
+				height: 0;
+			}
+		}
+
+		.mkd-card-text-holder {
+			padding: 0 30px 40px;
+
+			h5 {
+				margin-top: 0;
+				margin-bottom: 22px;
+				text-transform: uppercase;
+			}
+
+			a {
+				text-transform: uppercase;
+				margin-top: 7px;
+				display: inline-block;
+				font-size: 13px;
+				font-weight: 600;
+				@include mkdTransition(opacity .3s);
+
+				&:hover {
+					opacity: .85;
+				}
+			}
+		}
+	}
+
+	&.mkd-card-circular {
+
+		.mkd-card-image {
+			@include mkdBorderRadius(50%);
+		}
+	}
+
+	&.mkd-card-image-above {
+
+		.mkd-card-text-holder,
+		.mkd-card-below-image {
+			background-color: #fff;
+		}
+
+		.mkd-card-text-holder {
+			padding-bottom: 35px;
+
+			h5 {
+				margin-bottom: 20px;
+			}
+
+			a {
+				margin-top: 7px;
+			}
+		}
+	}
+
+	&.mkd-card-image-inside {
+
+		.mkd-card-inner {
+			background-color: #fff;
+			padding-top: 52px;
+		}
+
+		.mkd-card-text-holder {
+			padding: 0 49px 20px;
+		}
+
+		.mkd-card-image-wrapper {
+			padding: 0 30px;
+		}
+	}
+
+	&.mkd-card-image-overlap {
+
+		.mkd-card-text-holder,
+		.mkd-card-below-image,
+		.mkd-card-behind-image {
+			background-color: #fff;
+		}
+
+		.mkd-card-text-holder {
+
+			h5 {
+				margin-bottom: 13px;
+			}
+
+			a {
+				margin-top: 12px;
+			}
+		}
+	}
+
+	.owl-controls {
+
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			font-size: 46px;
+			line-height: 50px;
+			width: 50px;
+			height: 50px;
+			margin-top: -25px;
+			text-align: center;
+			color: #cbcbcb;
+		}
+
+		.owl-prev {
+			left: -55px;
+		}
+
+		.owl-next {
+			right: -55px;
+		}
+	}
+}

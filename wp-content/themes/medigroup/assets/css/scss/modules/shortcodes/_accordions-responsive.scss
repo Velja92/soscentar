@@ -1,0 +1,10 @@
+@include phone-portrait {
+ 
+	.mkd-accordion-holder:not(.mkd-boxed) div.mkd-accordion-content {
+		padding: 10px;
+	}
+
+	.mkd-accordion-holder .mkd-title-holder .mkd-accordion-mark {
+		right: 10px;
+	}
+}

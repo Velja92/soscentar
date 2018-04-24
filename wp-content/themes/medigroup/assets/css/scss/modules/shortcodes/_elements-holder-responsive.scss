@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Elements Holder Responsive start style
+   ========================================================================== */
+$responsive-stages: (1440, 1280, 1024, 768, 600, 480);
+
+.mkd-elements-holder {
+	@each $stage in $responsive-stages {
+		&.mkd-responsive-mode-#{$stage}.mkd-two-columns,
+		&.mkd-responsive-mode-#{$stage}.mkd-three-columns,
+		&.mkd-responsive-mode-#{$stage}.mkd-four-columns,
+		&.mkd-responsive-mode-#{$stage}.mkd-five-columns,
+		&.mkd-responsive-mode-#{$stage}.mkd-six-columns {
+
+			.mkd-elements-holder-item {
+				@media only screen and (max-width: #{$stage}px) {
+					width: 100%;
+					display: inline-block;
+					height: auto;
+				}
+			}
+		}
+	}
+	.mkd-elements-holder-item-content {
+		@media only screen and (max-width: 480px) {
+			padding: 0 10px;
+		}
+	}
+
+}
+
+@each $stage in $responsive-stages {
+	@media only screen and (max-width: #{$stage}px) {
+		.mkd-elements-holder.mkd-responsive-mode-#{$stage}.mkd-one-column-alignment-left .mkd-elements-holder-item .mkd-elements-holder-item-content {
+			text-align: left;
+		}
+		.mkd-elements-holder.mkd-responsive-mode-#{$stage}.mkd-one-column-alignment-right .mkd-elements-holder-item .mkd-elements-holder-item-content {
+			text-align: right;
+		}
+		.mkd-elements-holder.mkd-responsive-mode-#{$stage}.mkd-one-column-alignment-center .mkd-elements-holder-item .mkd-elements-holder-item-content {
+			text-align: center;
+		}
+	}
+}
+
+/* ==========================================================================
+   End of Elements Holder Responsive style
+   ========================================================================== */

@@ -1,0 +1,284 @@
+/* ==========================================================================
+# Title area style - start
+========================================================================== */
+
+@include keyframes(title-animation-from-right) {
+	0% {
+		opacity: 0;
+		transform: translate(50%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@include keyframes(title-animation-from-left) {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.mkd-title {
+	display: block;
+	width: 100%;
+	height: 94px;
+	text-align: left;
+	position: relative;
+	z-index: 101;
+	background-color: #fbfbfc;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #f2f2f2;
+
+	&.mkd-has-parallax-background {
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 101;
+	}
+
+	&.mkd-content-center-alignment {
+		text-align: center;
+
+		.mkd-subtitle {
+			margin: 0 auto;
+		}
+	}
+
+	&.mkd-content-right-alignment {
+		text-align: right;
+	}
+
+	&.mkd-animation-right-left {
+		h1, .mkd-subtitle span, .mkd-breadcrumbs-holder {
+			@include animation(title-animation-from-right, 0.5s, 1, cubic-bezier(0.175, 0.885, 0.320, 1.275), 1s);
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+	}
+
+	&.mkd-animation-left-right {
+		h1, .mkd-subtitle span, .mkd-breadcrumbs-holder {
+			@include animation(title-animation-from-left, 0.5s, 1, cubic-bezier(0.175, 0.885, 0.320, 1.275), 1s);
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+	}
+
+	&.mkd-has-responsive-background {
+		height: auto !important;
+
+		.mkd-title-holder {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.mkd-title-holder .mkd-container {
+			display: block;
+			height: 100%;
+		}
+
+		.mkd-title-holder .mkd-container-inner {
+			display: table;
+			height: 100%;
+		}
+
+		.mkd-title-holder .mkd-title-subtitle-holder {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+		}
+
+	}
+
+	.mkd-title-image {
+		img {
+			display: block;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	&.mkd-title-image-not-responsive {
+
+		.mkd-title-image {
+			display: none;
+		}
+
+	}
+
+	.mkd-title-holder {
+		display: table;
+		height: 100%;
+		position: relative;
+		width: 100%;
+
+		.mkd-container {
+			background-color: transparent;
+			display: table-row;
+			vertical-align: middle;
+		}
+
+		.mkd-container-inner {
+			display: table-cell;
+			padding: 0 !important;
+			vertical-align: middle;
+		}
+
+		.mkd-title-subtitle-holder {
+			display: block;
+			padding: 0;
+			position: relative;
+			z-index: 25;
+		}
+
+		.mkd-title-subtitle-holder-inner {
+			position: relative; //because of the breadcrumbs (absolute position) on standard type title
+		}
+
+		/* #Standard title - start
+		========================================================================== */
+
+		h1 {
+			color: $first-main-color;
+			display: inline-block;
+			line-height: 1em;
+			vertical-align: middle;
+			font-family: $headings-font-family;
+			text-transform: uppercase;
+			font-size: 27px;
+			margin: 0;
+		}
+
+		h1 span {
+			display: inline-block;
+		}
+
+		.mkd-subtitle {
+			display: block;
+			font-size: $default-text-size;
+			line-height: 1.666666666666667em;
+			font-weight: 400;
+
+			width: 60%;
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		/* #Standard title - end
+		========================================================================== */
+
+		/* #Breadcrumb title - start
+		========================================================================== */
+
+		.mkd-breadcrumbs-holder {
+			display: inline-block;
+		}
+
+		.mkd-breadcrumbs a, .mkd-breadcrumbs span {
+			color: #6a767e;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 1.6em;
+			display: inline-block;
+			text-transform: uppercase;
+			vertical-align: middle;
+			font-family: $headings-font-family;
+		}
+		/* #Breadcrumb title - end
+		========================================================================== */
+
+	}
+
+	&.mkd-standard-type {
+		.mkd-breadcrumbs-holder {
+			position: absolute;
+			top: 47px;
+			height: 100%;
+
+			.mkd-breadcrumbs {
+				display: table;
+				height: 100%;
+				width: 100%;
+			}
+
+			.mkd-breadcrumbs-inner {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+		}
+	}
+
+	&.mkd-standard-type.mkd-content-left-alignment {
+		.mkd-breadcrumbs-holder {
+			left: 0;
+		}
+	}
+
+	&.mkd-standard-type.mkd-content-right-alignment {
+		.mkd-breadcrumbs-holder {
+			right: 0;
+		}
+	}
+
+	&.mkd-standard-type.mkd-content-center-alignment {
+		.mkd-breadcrumbs-holder {
+			position: relative;
+			top: auto;
+			height: auto;
+			display: block;
+			margin-top: 20px;
+		}
+	}
+
+	&.mkd-breadcrumb-type .mkd-title-holder .mkd-breadcrumbs {
+		a, span {
+			font-weight: 400;
+		}
+	}
+}
+
+.mkd-large-title-text {
+	.mkd-title .mkd-title-holder h1 {
+		font-size: 30px;
+
+	}
+
+	.mkd-title .mkd-subtitle {
+		font-size: 18px;
+	}
+
+	&.mkd-title-with-subtitle {
+		.mkd-title .mkd-title-holder h1 {
+			margin-bottom: 28px;
+		}
+	}
+}
+
+.mkd-medium-title-text {
+	.mkd-title .mkd-title-holder h1 {
+		font-size: 25px;
+	}
+
+	&.mkd-title-with-subtitle {
+		.mkd-title .mkd-title-holder h1 {
+			margin-bottom: 19px;
+		}
+	}
+}
+
+/* ==========================================================================
+# Title area style - end
+========================================================================== */

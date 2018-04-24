@@ -1,0 +1,388 @@
+@import "blocks/logo";
+@import "blocks/main_menu";
+@import "widgets/search";
+@import "widgets/sections";
+@import "widgets/banner";
+@import "top-bar/top-bar";
+@import "types/header-type1/_header-type1";
+@import "types/header-vertical/_header-vertical";
+@import "types/header-minimal/_header-minimal";
+@import "types/mobile-header/_mobile-header";
+
+$logo-area-height: 94px;
+$menu-area-height: 60px;
+$sticky-header-height: 85px;
+
+.mkd-page-header {
+
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	vertical-align: middle;
+	width: 100%;
+	z-index: 110;
+
+	/* ==========================================================================
+	#General header layout - start
+	========================================================================== */
+	a img {
+		display: block;
+	}
+
+	.mkd-grid {
+		height: 100%;
+
+		.mkd-vertical-align-containers {
+			padding: 0;
+			@include mkdTransition(background-color 0.3s ease);
+		}
+	}
+
+	/* ==========================================================================
+	#General header layout - end
+	========================================================================== */
+
+	/* ==========================================================================
+	#Logo area styles - start
+	========================================================================== */
+	.mkd-logo-area {
+		height: $logo-area-height;
+		overflow: hidden;
+		position: relative;
+		z-index: 99;
+
+		.mkd-logo-wrapper a {
+			max-height: $logo-area-height*0.9;
+		}
+	}
+	/* ==========================================================================
+	#Logo area styles - end
+	========================================================================== */
+
+	/* ==========================================================================
+	#Menu area styles - start
+	========================================================================== */
+	.mkd-menu-area {
+		height: $menu-area-height;
+		position: relative;
+		z-index: 99;
+		@include mkdTransition(background-color 0.3s ease);
+
+		.mkd-logo-wrapper a {
+			max-height: $menu-area-height*0.9;
+		}
+
+		.mkd-position-right-inner {
+			height: 100%;
+		}
+	}
+
+	/* ==========================================================================
+	#Menu area styles - end
+	========================================================================== */
+
+	/* ==========================================================================
+	#Sticky header styles - start
+	========================================================================== */
+	.mkd-sticky-header {
+		height: $sticky-header-height;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		-webkit-backface-visibility: hidden;
+
+		@include mkdTransition(transform 0.3s ease);
+		@include mkdTransform(translateY(-100%));
+
+		.mkd-shopping-cart-dropdown {
+			right: -25px;
+		}
+
+		.widget_mkd_search_opener:before {
+			content: '';
+			width: 1px;
+			height: 50%;
+			background-color: #f3f3f3;
+			position: absolute;
+			top: 50%;
+			left: 0px;
+
+			@include mkdTransform(translateY(-50%));
+		}
+
+		.mkd-shopping-cart-holder:after {
+			content: '';
+			width: 1px;
+			height: 50%;
+			background-color: #f3f3f3;
+			position: absolute;
+			top: 50%;
+			right: 0px;
+
+			@include mkdTransform(translateY(-50%));
+		}
+
+		.mkd-shopping-cart-holder:before {
+			content: '';
+			width: 1px;
+			height: 50%;
+			background-color: #f3f3f3;
+			position: absolute;
+			top: 50%;
+			left: 0px;
+
+			@include mkdTransform(translateY(-50%));
+		}
+
+		.widget.widget_mkd_search_opener.mkd-sticky-right-widget {
+			padding: 0 23px;
+		}
+
+		.mkd-sticky-right-widget-area .mkd-shopping-cart-holder {
+			padding: 0 24px;
+		}
+
+		&.header-appear {
+			transform: translateY(0%);
+		}
+
+		.mkd-sticky-holder {
+			height: 100%;
+			background-color: #fff;
+			position: relative;
+			z-index: 2;
+
+			@include mkdBoxShadow(rgba(0, 0, 0, 0.03) 1px 2px 4px 1px);
+			@include mkdBoxSizing(border-box);
+		}
+
+		.admin-bar &.header-appear {
+			top: 32px;
+		}
+
+		.mkd-sticky-holder .mkd-logo-wrapper a {
+			max-height: $sticky-header-height*0.9;
+		}
+
+		.mkd-sticky-right-widget-area {
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+			color: #fff;
+
+			@include mkdClearfix;
+		}
+
+		.mkd-sticky-right-widget {
+			display: table;
+			height: 100%;
+			float: left;
+			margin-left: 15px;
+			position: relative;
+		}
+
+		.mkd-sticky-right-widget-inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.mkd-sticky-right {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.mkd-main-menu > ul > li:hover > a,
+		body:not(.mkd-menu-item-first-level-bg-color) & .mkd-main-menu > ul > li:hover > a {
+			color: $first-main-color;
+		}
+
+		.mkd-vertical-align-containers .mkd-position-right-inner {
+			height: 100%;
+		}
+	}
+
+	/* ==========================================================================
+	#Sticky header styles - end
+	========================================================================== */
+
+	/* ==========================================================================
+	#Fixed header styles - start
+	========================================================================== */
+	.mkd-fixed-wrapper.fixed {
+		width: 100%;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		-webkit-backface-visibility: hidden;
+	}
+
+	/* ==========================================================================
+	#Fixed header - end
+	========================================================================== */
+
+	.mkd-search-opener {
+		color: #838383;
+		display: table-cell;
+		vertical-align: middle;
+
+		&:hover {
+			color: $first-main-color;
+		}
+	}
+}
+
+/* ==========================================================================
+#Light header - begin
+========================================================================== */
+
+.mkd-light-header,
+.mkd-light-header .mkd-logo-area,
+.mkd-dark-header.mkd-logo-light-header .mkd-logo-area,
+.mkd-dark-header.mkd-menu-light-header .mkd-menu-area,
+.mkd-logo-light-header .mkd-logo-area,
+.mkd-menu-light-header .mkd-menu-area,
+.mkd-vertical-menu-area {
+	//color: $header-light-color !important; //Beacause of inline color styles
+
+	.mkd-main-menu-widget-area {
+		color: $header-light-color; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-light-color; //Beacause of inline color styles
+		}
+
+	}
+
+	.mkd-light-logo {
+		opacity: 1;
+	}
+
+	.mkd-dark-logo,
+	.mkd-normal-logo {
+		opacity: 0;
+	}
+
+}
+
+.mkd-light-header .widget_text.mkd-right-from-logo-widget,
+.mkd-dark-header.mkd-logo-light-header .mkd-logo-area .widget_text.mkd-right-from-logo-widget,
+.mkd-logo-light-header .mkd-logo-area .widget_text.mkd-right-from-logo-widget {
+
+	.mkd-iwt-icon-holder .mkd-icon-element,
+	.mkd-icon-shortcode .lnr-pointer-right {
+		color: $header-light-color !important;
+	}
+
+	span.mkd-icon-shortcode.circle {
+		background-color: rgba(255, 255, 255, 0.3) !important;
+	}
+
+	.mkd-icon-element {
+		color: $header-light-color !important;
+	}
+
+	.mkd-iwt-title-holder h6 {
+		color: $header-light-color;
+	}
+
+	.mkd-iwt-text-holder p {
+		color: $header-light-color !important;
+	}
+
+	h6 {
+		color: $header-light-color;
+	}
+}
+
+.mkd-light-header .mkd-menu-area .mkd-right-from-main-menu-widget,
+.mkd-dark-header.mkd-menu-light-header .mkd-menu-area .mkd-right-from-main-menu-widget,
+.mkd-menu-light-header .mkd-menu-area .mkd-right-from-main-menu-widget {
+	border-color: $header-light-color;
+}
+
+/* ==========================================================================
+#Light header - end
+========================================================================== */
+
+/* ==========================================================================
+#Dark header - begin
+========================================================================== */
+
+.mkd-dark-header,
+.mkd-dark-header .mkd-logo-area,
+.mkd-light-header.mkd-logo-dark-header .mkd-logo-area,
+.mkd-light-header.mkd-menu-dark-header .mkd-menu-area,
+.mkd-logo-dark-header .mkd-logo-area,
+.mkd-menu-dark-header .mkd-menu-area,
+.mkd-dark-header .mkd-vertical-menu-area {
+	//color: $header-dark-color !important; //Because of inline color styles
+
+	.mkd-main-menu-widget-area {
+		color: $header-dark-color !important; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-dark-color !important; //Beacause of inline color styles
+		}
+
+	}
+
+	.mkd-dark-logo {
+		opacity: 1;
+	}
+
+	.mkd-normal-logo,
+	.mkd-light-logo {
+		opacity: 0;
+	}
+
+}
+
+.mkd-dark-header .widget_text.mkd-right-from-logo-widget,
+.mkd-light-header.mkd-logo-dark-header .mkd-logo-area .widget_text.mkd-right-from-logo-widget,
+.mkd-logo-dark-header .mkd-logo-area .widget_text.mkd-right-from-logo-widget {
+
+	.mkd-iwt-icon-holder .mkd-icon-element,
+	.mkd-icon-shortcode .lnr-pointer-right {
+		color: $header-dark-color !important;
+	}
+
+	span.mkd-icon-shortcode.circle {
+		background-color: rgba(0, 0, 0, 0.3) !important;
+	}
+
+	.mkd-icon-element {
+		color: $header-dark-color !important;
+	}
+
+	.mkd-iwt-title-holder h6 {
+		color: $header-dark-color;
+	}
+
+	.mkd-iwt-text-holder p {
+		color: $header-dark-color !important;
+	}
+
+	h6 {
+		color: $header-dark-color;
+	}
+}
+
+.mkd-dark-header .mkd-menu-area .mkd-right-from-main-menu-widget,
+.mkd-light-header.mkd-menu-dark-header .mkd-menu-area .mkd-right-from-main-menu-widget,
+mkd-menu-dark-header .mkd-menu-area .mkd-right-from-main-menu-widget {
+	border-color: $header-dark-color;
+}
+
+/* ==========================================================================
+#Dark header - end
+========================================================================== */

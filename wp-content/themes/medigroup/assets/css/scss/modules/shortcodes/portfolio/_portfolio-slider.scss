@@ -1,0 +1,53 @@
+/* Portfolio slider styles - start
+   ========================================================================== */
+.mkd-portfolio-slider-holder {
+	.mkd-portfolio-slider-list {
+		list-style-type: none;
+		text-align: center;
+
+		width: auto;
+
+		margin: 0 -15px;
+
+		li {
+			padding: 0 15px;
+		}
+	}
+
+	.mkd-ptfs-item-image {
+		margin-bottom: 37px;
+
+		a {
+			display: block;
+		}
+
+		img {
+			vertical-align: middle;
+		}
+	}
+
+	.mkd-ptfs-item-title {
+		margin-top: 0;
+		margin-bottom: 19px;
+	}
+
+	.mkd-ptfs-item-excerpt-holder {
+		p {
+			margin: 0;
+		}
+	}
+
+	.owl-pagination {
+		margin-top: 53px;
+	}
+
+	&.mkd-portfolio-slider-light {
+		.mkd-ptfs-item-title,
+		.mkd-ptfs-item-excerpt-holder {
+			color: #fff;
+		}
+	}
+}
+
+/* Portfolio slider styles - end
+   ========================================================================== */

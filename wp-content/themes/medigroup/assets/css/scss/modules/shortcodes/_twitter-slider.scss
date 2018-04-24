@@ -1,0 +1,92 @@
+.mkd-twitter-slider {
+	text-align: center;
+	font-weight: 400;
+	padding-bottom: 40px;
+
+	a {
+		color: inherit;
+	}
+
+	&.mkd-nav-dark .slick-slider .slick-dots li {
+		&.slick-active button:before {
+			color: $first-main-color !important;
+		}
+
+		button:before {
+			color: #acacac !important;
+		}
+	}
+
+	.mkd-twitter-slider-item-text {
+		line-height: 48px;
+		font-size: 24px;
+	}
+
+	.mkd-twitter-slider-item-author {
+		font-size: 14px;
+		margin-top: 22px;
+	}
+
+	.slick-slider {
+		.slick-prev, .slick-next {
+			display: none !important;
+		}
+
+		ul.slick-dots {
+			margin: 20px 0 0;
+			width: 100%;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+		}
+
+		.slick-dots li {
+
+			position: relative;
+			width: 20px;
+			display: inline-block;
+			height: 20px;
+			padding: 0;
+			cursor: pointer;
+
+			button {
+				font-size: 0;
+				line-height: 0;
+				display: block;
+				width: 20px;
+				height: 20px;
+				padding: 5px;
+				cursor: pointer;
+				color: transparent;
+				border: 0;
+				outline: none;
+				background: transparent;
+
+				&:before {
+					font-family: 'slick';
+					font-size: 40px;
+					line-height: 40px;
+					position: absolute;
+					top: -10px;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					content: '•';
+					text-align: center;
+					opacity: .44;
+					color: #fff;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+			}
+
+			&.slick-active button:before {
+				opacity: 1;
+				color: #fff !important;
+			}
+
+		}
+
+	}
+
+}

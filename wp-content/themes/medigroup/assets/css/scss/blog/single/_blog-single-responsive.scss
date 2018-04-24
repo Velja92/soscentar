@@ -1,0 +1,38 @@
+@include phone-landscape {
+	.mkd-blog-holder.mkd-blog-single .mkd-author-description .mkd-author-description-text-holder {
+		padding-left: 0;
+	}
+
+	.mkd-blog-single-navigation .mkd-blog-single-prev.mkd-single-nav-with-image .mkd-single-nav-content-holder {
+		padding-left: 0 !important;
+		float: left !important;
+	}
+
+	.mkd-blog-single-navigation .mkd-blog-single-next.mkd-single-nav-with-image .mkd-single-nav-content-holder {
+		padding-right: 0 !important;
+		float: right !important;
+	}
+}
+
+@include phone-portrait {
+	.single .mkd-single-tags-holder .mkd-tags a {
+		margin: 2px 5px !important;
+	}
+}
+
+@include ipad-portrait {
+	.single .mkd-blog-single-navigation .mkd-blog-single-prev span.mkd-icon-stack-left,
+	.single .mkd-blog-single-navigation .mkd-blog-single-next span.mkd-icon-stack-right {
+		display: none;
+	}
+
+	.single .mkd-blog-single-navigation .mkd-blog-single-prev span.mkd-prev-post-title {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.single .mkd-blog-single-navigation .mkd-blog-single-next span.mkd-next-post-title {
+		padding-right: 0;
+		width: 100% ;
+	}
+}

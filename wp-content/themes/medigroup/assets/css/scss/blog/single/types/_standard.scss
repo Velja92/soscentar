@@ -1,0 +1,35 @@
+.mkd-blog-holder {
+
+	&.mkd-blog-single {
+
+		&.mkd-blog-standard {
+
+			.format-quote .mkd-post-mark {
+				position: absolute;
+				top: -32px;
+				right: -21px;
+				font-size: 200px;
+				color: #fff;
+				opacity: 0.2;
+			}
+
+			.format-link .mkd-post-mark {
+				position: absolute;
+				top: 20px;
+				right: 30px;
+				font-size: 80px;
+				color: #fff;
+				opacity: 0.2;
+			}
+
+			article.format-quote .mkd-post-content .mkd-post-text {
+				background-color: $first-main-color;
+				padding: 20px 30px 20px 29px;
+			}
+
+			article.format-link .mkd-post-content .mkd-post-text {
+				padding: 20px 30px 95px 29px;
+			}
+		}
+	}
+}

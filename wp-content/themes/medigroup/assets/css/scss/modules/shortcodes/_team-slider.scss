@@ -1,0 +1,53 @@
+/* ==========================================================================
+   # Team Slider styles - start
+   ========================================================================== */
+.mkd-team-slider {
+	margin: 0 -12px;
+
+	.mkd-team {
+		padding: 0 12px;
+
+		.mkd-team-info {
+			padding: 22px 10px 23px;
+		}
+
+		.mkd-team-name {
+			text-transform: none;
+			font-weight: 400;
+			margin-bottom: 6px;
+			margin-top: 0;
+		}
+
+		.mkd-team-position {
+			font-weight: 600;
+			margin: 0;
+		}
+	}
+
+	.owl-controls {
+
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			font-size: 46px;
+			line-height: 50px;
+			width: 50px;
+			height: 50px;
+			margin-top: -25px;
+			text-align: center;
+			color: #cbcbcb;
+		}
+
+		.owl-prev {
+			left: -55px;
+		}
+
+		.owl-next {
+			right: -55px;
+		}
+	}
+}
+/* ==========================================================================
+   # Team Slider styles - end
+   ========================================================================== */

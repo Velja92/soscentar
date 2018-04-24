@@ -1,0 +1,638 @@
+/* ==========================================================================
+# Fullscreen menu style - begin
+========================================================================== */
+
+/* Fullscreen general style - begin
+========================================================================== */
+
+.side_menu_button .mkd-fullscreen-menu-opener {
+	@include mkdTransition(background-color 0.15s ease-out);
+}
+
+.mkd-dark-header .mkd-page-header > div:not(.mkd-sticky-header) .mkd-fullscreen-menu-opener:not(.opened),
+.mkd-dark-header.mkd-header-style-on-scroll .mkd-page-header .mkd-fullscreen-menu-opener:not(.opened),
+.mkd-dark-header .mkd-top-bar .mkd-fullscreen-menu-opener:not(.opened) {
+	color: $header-dark-color !important;
+}
+
+.mkd-light-header .mkd-page-header > div:not(.mkd-sticky-header) .mkd-fullscreen-menu-opener:not(.opened),
+.mkd-light-header.mkd-header-style-on-scroll .mkd-page-header .mkd-fullscreen-menu-opener:not(.opened),
+.mkd-light-header .mkd-top-bar .mkd-fullscreen-menu-opener:not(.opened) {
+	color: $header-light-color !important;
+}
+
+.mkd-fullscreen-menu-opener {
+	font-size: 16px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	@include mkdTransition(color 0.2s ease, opacity 0.2s ease);
+	color: #777;
+	width: 25px;
+	vertical-align: baseline;
+
+	.mkd-fullscreen-menu-opener-icon {
+		display: inline-block;
+		line-height: inherit;
+		vertical-align: middle;
+		text-align: center;
+		width: 100%;
+		height: 25%;
+		position: relative;
+
+		.mkd-fsm-first-line,
+		.mkd-fsm-second-line,
+		.mkd-fsm-third-line {
+			position: absolute;
+			top: 45%;
+			left: 0;
+
+			height: 0;
+			border-bottom: 2px solid;
+
+			@include mkdTransition(all 0.2s ease-in-out);
+		}
+
+		.mkd-fsm-first-line {
+			width: 16px;
+			@include mkdTransform(translateY(-7px));
+		}
+
+		.mkd-fsm-second-line {
+			width: 20px;
+			-webkit-transition-delay: 0.05s; /* Safari */
+			transition-delay: 0.05s;
+		}
+
+		.mkd-fsm-third-line {
+			width: 22px;
+			@include mkdTransform(translateY(7px));
+			-webkit-transition-delay: 0.1s; /* Safari */
+			transition-delay: 0.1s;
+		}
+
+	}
+}
+
+.mkd-fullscreen-menu-opener {
+	&:hover {
+		color: #303030;
+
+		.mkd-fsm-first-line,
+		.mkd-fsm-second-line,
+		.mkd-fsm-third-line {
+			width: 25px;
+		}
+	}
+	&.opened {
+		color: #fff;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		.mkd-fsm-first-line {
+			-webkit-transition-delay: 0s;
+			transition-delay: 0s;
+			width: 25px;
+			top: 0 !important;
+			@include mkdTransform(rotate(45deg));
+		}
+
+		.mkd-fsm-second-line {
+			display: none;
+		}
+
+		.mkd-fsm-third-line {
+			-webkit-transition-delay: 0s;
+			transition-delay: 0s;
+			width: 25px;
+			top: 0 !important;
+			@include mkdTransform(rotate(-45deg));
+		}
+	}
+}
+
+.mkd-fullscreen-menu-opener-inner {
+	display: inline-block;
+	height: 2px;
+	position: relative;
+	top: -1px;
+	vertical-align: middle;
+	width: 13px;
+}
+
+.mkd-fullscreen-menu-opener:hover {
+
+	.mkd-line {
+		background-color: $first-main-color;
+	}
+
+}
+
+.mkd-fullscreen-menu-opener.opened {
+
+	.mkd-line {
+		background-color: transparent !important;
+	}
+
+	.mkd-line:after {
+		background-color: #000;
+		top: 0 !important;
+		@include mkdTransform(rotate(45deg));
+	}
+
+	.mkd-line:before {
+		background-color: #000;
+		top: 0 !important;
+		@include mkdTransform(rotate(-45deg));
+	}
+
+}
+
+.mkd-fullscreen-menu-opener.opened:hover {
+
+	.mkd-line:after,
+	.mkd-line:before {
+		background-color: $first-main-color;
+	}
+
+}
+
+.mkd-fullscreen-menu-opener.medium {
+
+	.mkd-fullscreen-menu-opener-inner,
+	.mkd-line,
+	.mkd-line:after,
+	.mkd-line:before {
+		height: 3px;
+		width: 19px;
+	}
+
+	.mkd-fullscreen-menu-opener-inner {
+		top: -2px;
+	}
+
+	.mkd-line:before {
+		top: -6px;
+	}
+
+	.mkd-line:after {
+		top: 6px;
+	}
+
+}
+
+.mkd-fullscreen-menu-opener.large {
+
+	.mkd-fullscreen-menu-opener-inner,
+	.mkd-line,
+	.mkd-line:after,
+	.mkd-line:before {
+		height: 4px;
+		width: 24px;
+	}
+
+	.mkd-fullscreen-menu-opener-inner {
+		top: -3px;
+	}
+
+	.mkd-line:before {
+		top: -8px;
+	}
+
+	.mkd-line:after {
+		top: 8px;
+	}
+
+}
+
+.mkd-fullscreen-menu-opened {
+
+	.mkd-logo-wrapper {
+		display: none;
+	}
+
+
+	.mkd-page-header,
+	.mkd-top-bar,
+	#multiscroll-nav {
+		visibility: hidden;
+	}
+
+	.mkd-fullscreen-menu-opener,
+	.mkd-logo-wrapper {
+		visibility: visible;
+	}
+
+	.mkd-fullscreen-menu-holder-outer {
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+
+}
+
+.mkd-fullscreen-menu-holder-outer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden !important;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 105; /* this has to be between header z-index and content z-index */
+}
+
+.mkd-fullscreen-menu-holder {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	display: table;
+	background-repeat: repeat;
+	background-position: 0px 0px;
+}
+
+.mkd-fullscreen-menu-holder-inner {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 100px 0px;
+}
+
+.touch {
+
+	.mkd-fullscreen-menu-holder-outer {
+		display: none;
+	}
+
+	.mkd-fullscreen-menu-opened .mkd-fullscreen-menu-holder-outer {
+		display: block;
+	}
+
+}
+
+nav.mkd-fullscreen-menu {
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	text-align: left;
+
+	ul {
+		position: relative;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin: 0 0 33px 0;
+			padding: 0;
+			text-align: center;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		li a {
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 30px;
+			letter-spacing: 1px;
+			color: #fff;
+			padding: 0px;
+			display: block;
+			position: relative;
+			text-decoration: none;
+			cursor: pointer;
+			text-transform: uppercase;
+
+			@include mkdTransition(color 0.15s ease-out);
+		}
+
+		li a:hover {
+			color: $first-main-color;
+		}
+
+		li a span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		li ul li a {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 21px;
+			letter-spacing: 2px;
+			color: $first-main-color;
+		}
+
+		li ul li a:hover {
+			color: #8d8d8d;
+		}
+
+		li ul li ul li a {
+			font-size: 0.5em;
+			line-height: 1em;
+		}
+
+	}
+
+	> ul {
+		display: block;
+	}
+
+	ul.sub_menu {
+		display: none;
+	}
+
+}
+
+.mkd-fullscreen-below-menu-widget-holder {
+	text-align: center;
+	margin-top: 123px;
+}
+
+.mkd-fullscreen-above-menu-widget-holder {
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+/* Fullscreen general style - end
+========================================================================== */
+
+/* Fullscreen fade animations general - begin
+========================================================================== */
+
+@-webkit-keyframes fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden
+	}
+}
+
+@-moz-keyframes fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden
+	}
+}
+
+@keyframes fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden
+	}
+}
+
+@-webkit-keyframes fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden
+	}
+	100% {
+		opacity: 1;
+		visibility: visible
+	}
+}
+
+@-moz-keyframes fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden
+	}
+	100% {
+		opacity: 1;
+		visibility: visible
+	}
+}
+
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden
+	}
+	100% {
+		opacity: 1;
+		visibility: visible
+	}
+}
+
+.mkd-fade-push-text-right .mkd-fullscreen-menu-holder-outer,
+.mkd-fade-push-text-top .mkd-fullscreen-menu-holder-outer,
+.mkd-fade-text-scaledown .mkd-fullscreen-menu-holder-outer {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	overflow: hidden !important;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: fixed;
+	z-index: 105;
+	opacity: 0;
+}
+
+.mkd-fullscreen-fade-out .mkd-fullscreen-menu-holder-outer {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-animation: fade_out .25s linear both;
+	animation: fade_out .25s linear both;
+}
+
+.mkd-fullscreen-menu-opened.mkd-fullscreen-fade-in .mkd-fullscreen-menu-holder-outer {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-animation: fade_in .25s linear both;
+	animation: fade_in .25s linear both;
+}
+
+/* Fullscreen fade animations general - end
+========================================================================== */
+
+/* Fullscreen animation push text right - begin
+========================================================================== */
+
+@-webkit-keyframes push_text_right {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-60px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes push_text_right {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-60px);
+	}
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+
+@keyframes push_text_right {
+	0% {
+		opacity: 0;
+		transform: translateX(-60px)
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0)
+	}
+}
+
+@-webkit-keyframes push_nav_right {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-60px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes push_nav_right {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-60px);
+	}
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+
+@keyframes push_nav_right {
+	0% {
+		opacity: 0;
+		transform: translateX(-60px)
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0)
+	}
+}
+
+.mkd-fullscreen-menu-opened.mkd-fade-push-text-right .mkd-fullscreen-menu-holder-outer nav > ul > li > a,
+.mkd-fullscreen-menu-opened.mkd-fade-push-text-right .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-below-menu-widget-holder > div,
+.mkd-fullscreen-menu-opened.mkd-fade-push-text-right .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-above-menu-widget-holder > div {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include mkdAnimation(push_text_right .4s cubic-bezier(0.175, 0.885, 0.32, 1) both);
+}
+
+.mkd-fade-push-text-right.mkd-push-nav-right .mkd-fullscreen-menu-holder-outer nav,
+.mkd-fade-push-text-right.mkd-push-nav-right .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-below-menu-widget-holder,
+.mkd-fade-push-text-right.mkd-push-nav-right .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-above-menu-widget-holder {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include mkdTransition(all .4s cubic-bezier(0.175, 0.885, 0.32, 1));
+	@include mkdTransform(translateX(0));
+}
+
+/* Fullscreen animation push text right - end
+========================================================================== */
+
+/* Fullscreen animation push text top - begin
+========================================================================== */
+
+@-webkit-keyframes push_text_top {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(60px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes push_text_top {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(60px);
+	}
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@keyframes push_text_top {
+	0% {
+		opacity: 0;
+		transform: translateY(60px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+.mkd-fullscreen-menu-opened.mkd-fade-push-text-top .mkd-fullscreen-menu-holder-outer nav > ul > li > a,
+.mkd-fullscreen-menu-opened.mkd-fade-push-text-top .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-below-menu-widget-holder > div,
+.mkd-fullscreen-menu-opened.mkd-fade-push-text-top .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-above-menu-widget-holder > div {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include mkdAnimation(push_text_top .4s ease-out both .5s);
+}
+
+.mkd-fade-push-text-top.mkd-push-text-top .mkd-fullscreen-menu-holder-outer nav,
+.mkd-fade-push-text-top.mkd-push-text-top .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-below-menu-widget-holder,
+.mkd-fade-push-text-top.mkd-push-text-top .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-above-menu-widget-holder {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include mkdTransform(translateY(-30px));
+	@include mkdTransition(all .75s ease-out);
+}
+
+/* Fullscreen animation push text top - end
+========================================================================== */
+
+/* Fullscreen animation fade text scaledown - begin
+========================================================================== */
+
+.mkd-fullscreen-menu-opened.mkd-fade-text-scaledown .mkd-fullscreen-menu-holder-outer nav,
+.mkd-fullscreen-menu-opened.mkd-fade-text-scaledown .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-below-menu-widget-holder,
+.mkd-fullscreen-menu-opened.mkd-fade-text-scaledown .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-above-menu-widget-holder {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	opacity: 1;
+	@include mkdTransform(scale(1));
+	@include mkdTransition(all .25s linear 0.1s);
+}
+
+.mkd-fade-text-scaledown .mkd-fullscreen-menu-holder-outer nav,
+.mkd-fade-text-scaledown .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-below-menu-widget-holder,
+.mkd-fade-text-scaledown .mkd-fullscreen-menu-holder-outer .mkd-fullscreen-above-menu-widget-holder {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	opacity: 0;
+	@include mkdTransform(scale(1.1));
+	@include mkdTransition(all .25s linear 0.1s);
+}
+
+/* Fullscreen animation fade text scaledown - end
+========================================================================== */
+
+/* ==========================================================================
+# Fullscreen menu style - end
+========================================================================== */
