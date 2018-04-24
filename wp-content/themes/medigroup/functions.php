@@ -441,9 +441,6 @@ if(!function_exists('medigroup_mikado_get_page_id')) {
      * @see medigroup_mikado_is_woocommerce_shop()
      */
     function medigroup_mikado_get_page_id() {
-        if(medigroup_mikado_is_woocommerce_installed() && medigroup_mikado_is_woocommerce_shop()) {
-            return medigroup_mikado_get_woo_shop_page_id();
-        }
 
         if(is_archive() || is_search() || is_404() || (is_home() && is_front_page())) {
             return -1;
@@ -831,8 +828,6 @@ if(!function_exists('medigroup_mikado_get_unique_page_class')) {
             } else {
                 $page_class = '.postid-'.$id;
             }
-        } elseif($id === medigroup_mikado_get_woo_shop_page_id()) {
-            $page_class = '.archive';
         } else {
             $page_class .= '.page-id-'.$id;
         }
